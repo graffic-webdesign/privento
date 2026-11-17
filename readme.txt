@@ -4,7 +4,7 @@ Tags: gdpr, cookie consent, cookie banner, google consent mode, privacy
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.3
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ It shows a consent banner, holds back tracking scripts until the visitor has agr
 * Accept all / Reject all / choose per category, with equally prominent Accept and Reject buttons
 * Google Consent Mode v2, denied by default
 * Scripts and embeds loaded from the most common tracking services are held back until consent is given (see the FAQ for what that covers)
-* Consent log with hashed IP addresses and CSV export
+* Consent log with hashed IP addresses, CSV export and an optional retention period
 * Consent expires after a period you choose and is then asked for again
 * Cookie scanner and a generated Cookie Policy page
 * Floating settings button and a `[privento_revoke]` link for withdrawing consent
@@ -84,6 +84,10 @@ The plugin checks its GitHub repository for a newer release twice a day, as part
 Its settings and the consent log are removed. The Cookie Policy page stays, since it is a normal page on your site. Deactivating removes nothing.
 
 == Changelog ==
+
+= 1.8.0 =
+* New: a retention period for the consent log. Under Settings → Consent Log you can keep records forever (the default — nothing changes unless you choose otherwise) or for 1, 2, 3 or 5 years. Older records are then deleted automatically once a day.
+* Records younger than a year are never deleted, since a consent can be valid that long and has to stay provable.
 
 = 1.7.3 =
 * Security hardening after a full review of the plugin. No vulnerability was found; these changes close gaps before they become one.
@@ -171,6 +175,9 @@ Its settings and the consent log are removed. The Cookie Policy page stays, sinc
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.8.0 =
+Adds an optional retention period for the consent log. Off by default: no records are deleted unless you set a period.
 
 = 1.7.0 =
 The last update you install by hand: from here on new versions arrive on the WordPress Updates screen. Your banner texts and settings are kept.
