@@ -369,7 +369,7 @@ msgstr "Länk till cookiepolicy"
 msgid "Cookie scan completed"
 msgstr "Cookieskanning genomförd"
 
-#: includes/Consent/Manager.php:180
+#: includes/Consent/Manager.php:188
 #: includes/Core/Settings.php:72
 msgid "Cookie settings"
 msgstr "Cookieinställningar"
@@ -648,7 +648,7 @@ msgstr "Inkludera knapp för att återkalla samtycke"
 msgid "Inherit from theme"
 msgstr "Ärv från temat"
 
-#: includes/Admin/Ajax.php:219
+#: includes/Admin/Ajax.php:228
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr "Otillräckliga behörigheter."
@@ -1028,7 +1028,7 @@ msgstr "Skanna nu"
 msgid "Scanning cookies…"
 msgstr "Skannar cookies…"
 
-#: includes/Admin/Ajax.php:215
+#: includes/Admin/Ajax.php:224
 msgid "Security check failed."
 msgstr "Säkerhetskontrollen misslyckades."
 

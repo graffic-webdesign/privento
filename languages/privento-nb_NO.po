@@ -369,7 +369,7 @@ msgstr "Lenke til erklæring om informasjonskapsler"
 msgid "Cookie scan completed"
 msgstr "Skanning etter informasjonskapsler fullført"
 
-#: includes/Consent/Manager.php:180
+#: includes/Consent/Manager.php:188
 #: includes/Core/Settings.php:72
 msgid "Cookie settings"
 msgstr "Innstillinger for informasjonskapsler"
@@ -648,7 +648,7 @@ msgstr "Ta med knapp for å trekke tilbake samtykket"
 msgid "Inherit from theme"
 msgstr "Arv fra temaet"
 
-#: includes/Admin/Ajax.php:219
+#: includes/Admin/Ajax.php:228
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr "Utilstrekkelige rettigheter."
@@ -1028,7 +1028,7 @@ msgstr "Skann nå"
 msgid "Scanning cookies…"
 msgstr "Skanner informasjonskapsler…"
 
-#: includes/Admin/Ajax.php:215
+#: includes/Admin/Ajax.php:224
 msgid "Security check failed."
 msgstr "Sikkerhetskontrollen mislyktes."
 

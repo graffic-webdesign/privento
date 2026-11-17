@@ -169,7 +169,10 @@ class Updater {
         }
 
         foreach ( (array) ( $release['assets'] ?? [] ) as $asset ) {
-            if ( self::ASSET === ( $asset['name'] ?? '' ) && ! empty( $asset['browser_download_url'] ) ) {
+            // This zip gets installed on every site: take it only from this
+            // repository's own releases, whatever else the response may say.
+            $from_here = 0 === strpos( (string) ( $asset['browser_download_url'] ?? '' ), 'https://github.com/' . self::REPO . '/releases/download/' );
+            if ( self::ASSET === ( $asset['name'] ?? '' ) && $from_here ) {
                 return $meta + [
                     'version' => ltrim( (string) $release['tag_name'], 'v' ),
                     'package' => (string) $asset['browser_download_url'],

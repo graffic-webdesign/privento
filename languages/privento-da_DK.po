@@ -369,7 +369,7 @@ msgstr "Link til cookiepolitik"
 msgid "Cookie scan completed"
 msgstr "Cookiescanning gennemført"
 
-#: includes/Consent/Manager.php:180
+#: includes/Consent/Manager.php:188
 #: includes/Core/Settings.php:72
 msgid "Cookie settings"
 msgstr "Cookieindstillinger"
@@ -648,7 +648,7 @@ msgstr "Inkluder tilbagekald-samtykkeknap"
 msgid "Inherit from theme"
 msgstr "Arv fra tema"
 
-#: includes/Admin/Ajax.php:219
+#: includes/Admin/Ajax.php:228
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr "Utilstrækkelige rettigheder."
@@ -1028,7 +1028,7 @@ msgstr "Scan nu"
 msgid "Scanning cookies…"
 msgstr "Scanner cookies…"
 
-#: includes/Admin/Ajax.php:215
+#: includes/Admin/Ajax.php:224
 msgid "Security check failed."
 msgstr "Sikkerhedstjek mislykkedes."
 

@@ -13,7 +13,7 @@ $release = [
     'body'       => 'Fixes.',
     'assets'     => [
         [ 'name' => 'source.tar.gz', 'browser_download_url' => 'https://example.test/source.tar.gz' ],
-        [ 'name' => 'privento.zip', 'browser_download_url' => 'https://example.test/privento.zip' ],
+        [ 'name' => 'privento.zip', 'browser_download_url' => 'https://github.com/graffic-webdesign/privento/releases/download/v1.7.1/privento.zip' ],
     ],
 ];
 
@@ -22,7 +22,7 @@ $GLOBALS['t_release'] = $release;
 
 // parse_release()
 $parsed = Updater::parse_release( $release );
-t_assert( '1.7.1' === $parsed['version'] && 'https://example.test/privento.zip' === $parsed['package'], 'parse_release_ok' );
+t_assert( '1.7.1' === $parsed['version'] && 'https://github.com/graffic-webdesign/privento/releases/download/v1.7.1/privento.zip' === $parsed['package'], 'parse_release_ok' );
 t_assert( null === Updater::parse_release( [ 'assets' => [] ] + $release ), 'parse_release_without_zip' );
 t_assert( null === Updater::parse_release( [ 'prerelease' => true ] + $release ), 'parse_release_prerelease' );
 t_assert( null === Updater::parse_release( [ 'draft' => true ] + $release ), 'parse_release_draft' );
@@ -39,7 +39,7 @@ $update = $updater->check( false, [], PRIVENTO_BASENAME, [] );
 t_assert(
     is_array( $update )
     && '1.7.1' === $update['version']
-    && 'https://example.test/privento.zip' === $update['package']
+    && 'https://github.com/graffic-webdesign/privento/releases/download/v1.7.1/privento.zip' === $update['package']
     && 'privento' === $update['slug']
     && 'https://github.com/graffic-webdesign/privento' === $update['id'],
     'check_maps_release'
@@ -70,7 +70,7 @@ t_assert( 'x' === $updater->details( 'x', 'plugin_information', (object) [ 'slug
 $info = $updater->details( false, 'plugin_information', (object) [ 'slug' => 'privento' ] );
 t_assert(
     is_object( $info ) && '1.7.1' === $info->version && str_contains( $info->sections['changelog'], 'Fixes.' )
-    && 'https://example.test/privento.zip' === $info->download_link,
+    && 'https://github.com/graffic-webdesign/privento/releases/download/v1.7.1/privento.zip' === $info->download_link,
     'details_describes_the_release'
 );
 

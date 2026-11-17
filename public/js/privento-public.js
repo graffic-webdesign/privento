@@ -20,7 +20,9 @@
     },
     set(name, value, days) {
       const exp = new Date(Date.now() + days * 864e5).toUTCString();
-      document.cookie = `${name}=${encodeURIComponent(btoa(JSON.stringify(value)))}; expires=${exp}; path=/; SameSite=Lax`;
+      // Secure on HTTPS, so the choice never travels over a plain connection.
+      const secure = location.protocol === 'https:' ? '; Secure' : '';
+      document.cookie = `${name}=${encodeURIComponent(btoa(JSON.stringify(value)))}; expires=${exp}; path=/; SameSite=Lax${secure}`;
     },
     remove(name) {
       document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
@@ -36,7 +38,11 @@
     load() {
       const raw = Cookie.get(COOKIE_NAME);
       // A cookie written under another version is a consent to something else.
-      this.data = (raw && raw.version === VERSION && !Cookie.isExpired(raw)) ? raw : null;
+      // A cookie is only a visitor's own word, and anything can write one. Trust
+      // it only in the exact shape this script writes; otherwise ask again.
+      const valid = raw && raw.version === VERSION && Array.isArray(raw.consented)
+        && raw.consented.every(c => CATEGORIES.includes(c)) && !Cookie.isExpired(raw);
+      this.data = valid ? raw : null;
       return this.data;
     },
     has(cat)      { return this.data && Array.isArray(this.data.consented) && this.data.consented.includes(cat); },

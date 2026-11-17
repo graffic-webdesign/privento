@@ -21,7 +21,7 @@ It shows a consent banner, holds back tracking scripts until the visitor has agr
 * Four categories: Necessary, Preferences, Statistics, Marketing
 * Accept all / Reject all / choose per category, with equally prominent Accept and Reject buttons
 * Google Consent Mode v2, denied by default
-* Known tracking scripts and embeds are blocked until consent is given
+* Scripts and embeds loaded from the most common tracking services are held back until consent is given (see the FAQ for what that covers)
 * Consent log with hashed IP addresses and CSV export
 * Consent expires after a period you choose and is then asked for again
 * Cookie scanner and a generated Cookie Policy page
@@ -61,7 +61,9 @@ Privento is distributed on GitHub, not on WordPress.org. Installed sites find ne
 == Frequently Asked Questions ==
 
 = Does this block Google Analytics before consent? =
-Yes. Scripts and embeds from known statistics and marketing services are held back until the visitor grants the matching category.
+It blocks what it can recognise: `<script>` and `<iframe>` tags that load from Google Analytics, Google Tag Manager, Google Ads/DoubleClick, Meta, Hotjar, Microsoft Clarity, YouTube, Vimeo, Google Maps and reCAPTCHA. Tags you add through Privento's own Integrations tab are always held back.
+
+It does not catch everything. A tracking snippet pasted into the theme as inline code, or a service that is not on that list, loads as before. For those, either load them through Google Tag Manager with Consent Mode, or mark the script up yourself as shown in the README so Privento holds it back. Check the result in your browser's network tab before relying on it.
 
 = Is Google Consent Mode v2 supported? =
 Yes — the default "denied" signals are printed at `wp_head` priority 1, before any GTM or GA snippet.

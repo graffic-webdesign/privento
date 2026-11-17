@@ -143,14 +143,22 @@ class Manager {
     }
 
     /**
-     * Allow at most 10 consent submissions per IP per minute to prevent
-     * anonymous flooding of the consent log.
+     * Caps consent submissions per address per minute, so the log cannot be
+     * flooded from one place.
+     *
+     * The cap is deliberately loose. Behind a proxy, CDN or office network many
+     * real visitors arrive from one address, and a visitor refused here leaves
+     * no record of their consent — a worse failure than a few surplus rows. The
+     * forwarded-for header is not used: anyone can set it, which would turn the
+     * cap off. Busy sites can raise it with the privento_consent_rate_limit filter.
      */
     private function is_rate_limited(): bool {
         $ip    = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ?? '' ) );
-        $key   = 'privento_rl_' . hash( 'sha256', $ip . AUTH_SALT );
+        $limit = (int) apply_filters( 'privento_consent_rate_limit', 60 );
+        // wp_salt(), not the AUTH_SALT constant: not every wp-config.php defines it.
+        $key   = 'privento_rl_' . hash( 'sha256', $ip . wp_salt( 'auth' ) );
         $count = (int) get_transient( $key );
-        if ( $count >= 10 ) {
+        if ( $count >= $limit ) {
             return true;
         }
         set_transient( $key, $count + 1, MINUTE_IN_SECONDS );

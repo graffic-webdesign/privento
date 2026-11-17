@@ -157,6 +157,15 @@ class Ajax {
             }
         }
 
+        // Tracking IDs are printed into script tags and URLs. Reduce them to the
+        // characters an ID can have — stricter format checks would risk blanking
+        // an unusual but valid one.
+        foreach ( [ 'gtm_id', 'ga4_id', 'meta_pixel_id' ] as $f ) {
+            if ( isset( $clean[ $f ] ) ) {
+                $clean[ $f ] = preg_replace( '/[^A-Za-z0-9_-]/', '', $clean[ $f ] );
+            }
+        }
+
         foreach ( $html_fields as $f ) {
             if ( array_key_exists( $f, $raw ) ) {
                 $clean[ $f ] = wp_kses_post( $raw[ $f ] );

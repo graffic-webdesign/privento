@@ -249,7 +249,7 @@ class Logger {
 
     private function hash_ip(): string {
         $ip = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0' ) );
-        return hash( 'sha256', $ip . AUTH_SALT );
+        return hash( 'sha256', $ip . wp_salt( 'auth' ) );
     }
 
     private function get_user_agent(): string {
@@ -261,10 +261,10 @@ class Logger {
     }
 
     private function detect_country(): string {
-        // Cloudflare header
-        if ( ! empty( $_SERVER['HTTP_CF_IPCOUNTRY'] ) ) {
-            return sanitize_key( $_SERVER['HTTP_CF_IPCOUNTRY'] );
-        }
-        return '';
+        // Cloudflare's header — which any client can send to a site that is not
+        // behind Cloudflare. Store it only when it has the shape of a country
+        // code; a longer value would not fit the column and lose the whole record.
+        $country = (string) wp_unslash( $_SERVER['HTTP_CF_IPCOUNTRY'] ?? '' );
+        return preg_match( '/\A[A-Za-z]{2}\z/', $country ) ? strtolower( $country ) : '';
     }
 }

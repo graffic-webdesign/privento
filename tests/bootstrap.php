@@ -114,3 +114,7 @@ function t_call_private( object $object, string $method, ...$args ) {
 }
 function rest_url( $path = '' ) { return 'https://example.test/wp-json/' . $path; }
 function esc_url_raw( $url ) { return $url; }
+function wp_salt( $scheme = 'auth' ) { return 'test-salt-' . $scheme; }
+function get_transient( $key ) { return $GLOBALS['wp_transients'][ $key ]['value'] ?? false; }
+function set_transient( $key, $value, $ttl = 0 ) { $GLOBALS['wp_transients'][ $key ] = [ 'value' => $value, 'ttl' => $ttl ]; return true; }
+function apply_filters( $hook, $value, ...$args ) { foreach ( $GLOBALS['wp_filters'][ $hook ] ?? [] as $cb ) { $value = $cb( $value, ...$args ); } return $value; }

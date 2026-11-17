@@ -367,7 +367,7 @@ msgstr ""
 msgid "Cookie scan completed"
 msgstr ""
 
-#: includes/Consent/Manager.php:180
+#: includes/Consent/Manager.php:188
 #: includes/Core/Settings.php:72
 msgid "Cookie settings"
 msgstr ""
@@ -646,7 +646,7 @@ msgstr ""
 msgid "Inherit from theme"
 msgstr ""
 
-#: includes/Admin/Ajax.php:219
+#: includes/Admin/Ajax.php:228
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr ""
@@ -1026,7 +1026,7 @@ msgstr ""
 msgid "Scanning cookies…"
 msgstr ""
 
-#: includes/Admin/Ajax.php:215
+#: includes/Admin/Ajax.php:224
 msgid "Security check failed."
 msgstr ""
 
