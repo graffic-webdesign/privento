@@ -95,6 +95,12 @@ git push origin main --tags
 
 The release workflow checks that the tag matches the version, runs the tests, builds `privento.zip` and publishes the release. Sites pick it up within twelve hours, or at once when an administrator clicks **Dashboard → Updates → Check again**.
 
+## Support
+
+Privento is published as-is. There is no support, and Issues are closed on this repository. You are welcome to fork it and adapt it under the licence below.
+
+Found a security problem? Please report it privately through the contact page on [graffic.dk](https://graffic.dk) rather than in public.
+
 ## Licence
 
 GPL-2.0-or-later. See [LICENSE](LICENSE).

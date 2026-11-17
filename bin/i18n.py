@@ -85,7 +85,7 @@ def read_po(path):
 def header(locale=None):
     lines = [
         'Project-Id-Version: Privento',
-        'Report-Msgid-Bugs-To: https://github.com/graffic-webdesign/privento/issues',
+        'Report-Msgid-Bugs-To: https://github.com/graffic-webdesign/privento',
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'Content-Transfer-Encoding: 8bit',
