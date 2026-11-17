@@ -93,7 +93,7 @@ git tag v1.7.0
 git push origin main --tags
 ```
 
-The release workflow checks that the tag matches the version, runs the tests, builds `privento.zip` and publishes the release. Sites pick it up within twelve hours, or at once when an administrator clicks **Dashboard → Updates → Check again**.
+The release workflow checks that the tag matches the version, runs the tests, builds `privento.zip` and publishes the release. Sites pick it up at their next update check (WordPress checks twice a day), or at once when an administrator clicks **Dashboard → Updates → Check again**.
 
 ## Support
 

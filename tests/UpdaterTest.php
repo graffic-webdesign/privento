@@ -45,9 +45,9 @@ t_assert(
     'check_maps_release'
 );
 
-// check(): the answer is cached for twelve hours.
+// check(): the answer is cached for an hour.
 $updater->check( false, [], PRIVENTO_BASENAME, [] );
-t_assert( 1 === $GLOBALS['wp_http_calls'] && 12 * HOUR_IN_SECONDS === $GLOBALS['wp_transients']['privento_update']['ttl'], 'check_caches_the_release' );
+t_assert( 1 === $GLOBALS['wp_http_calls'] && HOUR_IN_SECONDS === $GLOBALS['wp_transients']['privento_update']['ttl'], 'check_caches_the_release' );
 
 // check(): GitHub unreachable → no update, no retry storm (one request per hour).
 t_reset();
@@ -89,6 +89,32 @@ $GLOBALS['t_release'] = $release;
 $updater              = new Updater();
 $updater->check( false, [], PRIVENTO_BASENAME, [] );
 $_GET['force-check'] = '1';
+Updater::recheck();
 $updater->check( false, [], PRIVENTO_BASENAME, [] );
 t_assert( 2 === $GLOBALS['wp_http_calls'], 'check_again_refetches_the_release' );
+$_GET = [];
+
+// The real "Check again" flow. Opening the Updates screen has just run
+// WordPress' plugin check, and WordPress will not run it again for a minute —
+// so our filter is never asked, however often the link is clicked. The updater
+// has to make WordPress check again itself, before that check is due to run.
+t_reset();
+$GLOBALS['wp_http']   = $http_ok;
+$GLOBALS['t_release'] = $release;
+new Updater();
+$GLOBALS['wp_transients']['privento_update'] = [ 'value' => [ 'version' => '1.7.0' ], 'ttl' => 1 ];
+$GLOBALS['wp_transients']['update_plugins']  = [ 'value' => (object) [ 'last_checked' => time() - 5, 'response' => [] ], 'ttl' => 0 ];
+$fire = static function () {
+    foreach ( $GLOBALS['wp_filters']['load-update-core.php'] ?? [] as $callback ) {
+        $callback();
+    }
+};
+
+$fire(); // Plain page load: nothing is disturbed.
+t_assert( time() - 5 <= $GLOBALS['wp_transients']['update_plugins']['value']->last_checked && isset( $GLOBALS['wp_transients']['privento_update'] ), 'opening_updates_screen_keeps_the_caches' );
+
+$_GET['force-check'] = '1';
+$fire();
+t_assert( ! isset( $GLOBALS['wp_transients']['privento_update'] ), 'check_again_forgets_the_cached_release' );
+t_assert( 0 === $GLOBALS['wp_transients']['update_plugins']['value']->last_checked, 'check_again_makes_wordpress_recheck_plugins' );
 $_GET = [];

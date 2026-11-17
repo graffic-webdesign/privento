@@ -28,6 +28,8 @@ class Updater {
     public function __construct() {
         add_filter( 'update_plugins_github.com', [ $this, 'check' ], 10, 4 );
         add_filter( 'plugins_api', [ $this, 'details' ], 10, 3 );
+        // Before WordPress' own plugin check on the Updates screen (priority 10).
+        add_action( 'load-update-core.php', [ self::class, 'recheck' ], 9 );
     }
 
     /**
@@ -58,6 +60,30 @@ class Updater {
             'package'      => $release['package'],
             'requires_php' => '8.0',
         ];
+    }
+
+    /**
+     * "Check again" on the Updates screen.
+     *
+     * WordPress re-checks core there, but not plugins: its plugin check ran when
+     * the screen opened and is skipped for the next minute, so this class is
+     * never asked and a release published since stays invisible. Forget the
+     * cached release and mark the plugin check as due, so the check that runs
+     * right after this asks again — WordPress.org and GitHub alike.
+     */
+    public static function recheck(): void {
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+        if ( empty( $_GET['force-check'] ) || ! current_user_can( 'update_plugins' ) ) {
+            return;
+        }
+
+        delete_site_transient( self::TRANSIENT );
+
+        $updates = get_site_transient( 'update_plugins' );
+        if ( is_object( $updates ) ) {
+            $updates->last_checked = 0;
+            set_site_transient( 'update_plugins', $updates );
+        }
     }
 
     /**
@@ -123,15 +149,14 @@ class Updater {
     }
 
     /**
-     * The latest release, from cache when possible. A failed lookup is cached
-     * too, for an hour, so an unreachable or rate-limiting GitHub is not asked
-     * again on every admin page load.
+     * The latest release, cached for an hour — a failed lookup too, so an
+     * unreachable or rate-limiting GitHub is not asked again on every admin
+     * page load. No longer than that: WordPress already decides how often it
+     * checks (twice a day from cron, hourly on the Plugins screen), and a longer
+     * cache here only delays a release on top of that.
      */
     private function latest(): ?array {
-        // "Check again" on the Updates screen asks for a fresh look.
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-        $forced = ! empty( $_GET['force-check'] ) && current_user_can( 'update_plugins' );
-        $cached = $forced ? false : get_site_transient( self::TRANSIENT );
+        $cached = get_site_transient( self::TRANSIENT );
         if ( is_array( $cached ) ) {
             return $cached ?: null;
         }
@@ -150,7 +175,7 @@ class Updater {
             $release = is_array( $body ) ? self::parse_release( $body ) : null;
         }
 
-        set_site_transient( self::TRANSIENT, $release ?? [], $release ? 12 * HOUR_IN_SECONDS : HOUR_IN_SECONDS );
+        set_site_transient( self::TRANSIENT, $release ?? [], HOUR_IN_SECONDS );
 
         return $release;
     }
