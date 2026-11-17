@@ -107,3 +107,8 @@ function esc_url( $url ) { return $url; }
 function esc_html_e( $text, $domain = 'default' ) { echo esc_html( __( $text, $domain ) ); }
 function esc_attr_e( $text, $domain = 'default' ) { echo esc_attr( __( $text, $domain ) ); }
 function get_bloginfo( $key ) { return '6.7'; }
+
+/** Calls a private method. A bound closure works on every PHP version; ReflectionMethod needs setAccessible() before 8.1. */
+function t_call_private( object $object, string $method, ...$args ) {
+    return ( fn() => $this->$method( ...$args ) )->call( $object );
+}

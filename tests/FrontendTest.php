@@ -61,5 +61,4 @@ ob_start();
 ( new \Privento\Public\Frontend() )->render_banner();
 t_assert( 2 === substr_count( ob_get_clean(), 'policy-link"' ), 'policy_link_is_on_by_default' );
 
-$sanitize = new ReflectionMethod( \Privento\Admin\Ajax::class, 'sanitize_settings' );
-t_assert( [ 'policy_link_enabled' => '0' ] === $sanitize->invoke( new \Privento\Admin\Ajax(), [ 'policy_link_enabled' => '0' ] ), 'policy_link_switch_is_saved' );
+t_assert( [ 'policy_link_enabled' => '0' ] === t_call_private( new \Privento\Admin\Ajax(), 'sanitize_settings', [ 'policy_link_enabled' => '0' ] ), 'policy_link_switch_is_saved' );

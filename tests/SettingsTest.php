@@ -63,8 +63,7 @@ unset( $GLOBALS['wp_site_translations'] );
 
 // Clearing a field in the Texts tab must store '' (= follow the language),
 // not drop the key and leave the old text in place.
-$sanitize = new ReflectionMethod( \Privento\Admin\Ajax::class, 'sanitize_settings' );
-$clean    = $sanitize->invoke( new \Privento\Admin\Ajax(), [ 'headline' => '', 'btn_save' => ' Gem ' ] );
+$clean = t_call_private( new \Privento\Admin\Ajax(), 'sanitize_settings', [ 'headline' => '', 'btn_save' => ' Gem ' ] );
 t_assert( [ 'headline' => '', 'btn_save' => 'Gem' ] === $clean, 'saving_empty_text_stores_empty' );
 
 // Saving another tab must not write the resolved texts back into the option —
