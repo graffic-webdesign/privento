@@ -4,7 +4,7 @@ Tags: gdpr, cookie consent, cookie banner, google consent mode, privacy
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,10 @@ The plugin checks its GitHub repository for a newer release twice a day, as part
 Its settings and the consent log are removed. The Cookie Policy page stays, since it is a normal page on your site. Deactivating removes nothing.
 
 == Changelog ==
+
+= 1.7.1 =
+* Removed the geo-targeting option from Settings. It never had any effect: the banner was shown to every visitor whether it was on or off, and it still is. Nothing changes on your site.
+* First version delivered through the built-in updater.
 
 = 1.7.0 =
 * Updates now arrive through WordPress itself. The plugin looks for new releases on GitHub and offers them on the Updates screen, with one-click and automatic updates. This is the last version that has to be uploaded by hand.
