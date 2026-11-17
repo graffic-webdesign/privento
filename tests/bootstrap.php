@@ -118,3 +118,25 @@ function wp_salt( $scheme = 'auth' ) { return 'test-salt-' . $scheme; }
 function get_transient( $key ) { return $GLOBALS['wp_transients'][ $key ]['value'] ?? false; }
 function set_transient( $key, $value, $ttl = 0 ) { $GLOBALS['wp_transients'][ $key ] = [ 'value' => $value, 'ttl' => $ttl ]; return true; }
 function apply_filters( $hook, $value, ...$args ) { foreach ( $GLOBALS['wp_filters'][ $hook ] ?? [] as $cb ) { $value = $cb( $value, ...$args ); } return $value; }
+
+// Cron: $GLOBALS['wp_cron'] maps hook => recurrence.
+function wp_next_scheduled( $hook ) { return isset( $GLOBALS['wp_cron'][ $hook ] ) ? 1 : false; }
+function wp_schedule_event( $time, $recurrence, $hook ) { $GLOBALS['wp_cron'][ $hook ] = $recurrence; return true; }
+function wp_clear_scheduled_hook( $hook ) { unset( $GLOBALS['wp_cron'][ $hook ] ); return 1; }
+
+/** A $wpdb that records queries and answers query() from a scripted list of affected-row counts. */
+function t_wpdb( array $affected = [] ) {
+    return new class( $affected ) {
+        public $prefix  = 'wp_';
+        public $queries = [];
+        private $affected;
+        public function __construct( array $affected ) { $this->affected = $affected; }
+        public function prepare( $sql, ...$args ) {
+            return vsprintf( str_replace( '%s', "'%s'", $sql ), $args );
+        }
+        public function query( $sql ) {
+            $this->queries[] = $sql;
+            return count( $this->affected ) > 1 ? array_shift( $this->affected ) : ( $this->affected[0] ?? 0 );
+        }
+    };
+}

@@ -30,6 +30,10 @@ msgstr "%d Einwilligungseinträge gespeichert. IP-Adressen werden DSGVO-konform 
 msgid "%d days"
 msgstr "%d Tage"
 
+#: admin/views/tabs/settings.php:74
+msgid "%d years"
+msgstr "%d Jahre"
+
 #: admin/views/tabs/dashboard.php:97
 msgid "%s records"
 msgstr "%s Einträge"
@@ -51,6 +55,7 @@ msgstr "1 Tag"
 msgid "1 minute"
 msgstr "1 Minute"
 
+#: admin/views/tabs/settings.php:71
 #: includes/Scanner/CookieScanner.php:25
 msgid "1 year"
 msgstr "1 Jahr"
@@ -119,7 +124,7 @@ msgstr "Alle akzeptiert"
 msgid "Accepted all"
 msgstr "Alle akzeptiert"
 
-#: admin/views/tabs/settings.php:56
+#: admin/views/tabs/settings.php:87
 msgid "Accessibility (WCAG)"
 msgstr "Barrierefreiheit (WCAG)"
 
@@ -270,6 +275,10 @@ msgstr "Gültigkeitsdauer der Einwilligung"
 msgid "Consent ID"
 msgstr "Einwilligungs-ID"
 
+#: admin/views/tabs/settings.php:56
+msgid "Consent Log"
+msgstr "Einwilligungsprotokoll"
+
 #: admin/views/layout.php:23
 #: admin/views/tabs/logs.php:20
 #: includes/Admin/Admin.php:43
@@ -323,12 +332,12 @@ msgstr "Cookie-Name"
 #: admin/views/layout.php:22
 #: admin/views/tabs/policy.php:22
 #: includes/Admin/Admin.php:42
-#: includes/Core/Installer.php:269
+#: includes/Core/Installer.php:271
 msgid "Cookie Policy"
 msgstr "Cookie-Richtlinie"
 
-#: admin/views/tabs/settings.php:78
-#: admin/views/tabs/settings.php:82
+#: admin/views/tabs/settings.php:109
+#: admin/views/tabs/settings.php:113
 msgid "Cookie Policy Page"
 msgstr "Seite der Cookie-Richtlinie"
 
@@ -490,7 +499,7 @@ msgstr "In WordPress bearbeiten"
 msgid "Enable Google Consent Mode v2"
 msgstr "Google Consent Mode v2 aktivieren"
 
-#: admin/views/tabs/settings.php:67
+#: admin/views/tabs/settings.php:98
 msgid "Enhanced focus rings"
 msgstr "Verstärkte Fokusrahmen"
 
@@ -538,6 +547,10 @@ msgstr "Schwebender Button"
 #: admin/views/tabs/design.php:293
 msgid "Font Family"
 msgstr "Schriftfamilie"
+
+#: admin/views/tabs/settings.php:69
+msgid "Forever"
+msgstr "Unbegrenzt"
 
 #: admin/views/tabs/design.php:170
 msgid "From %s"
@@ -648,7 +661,7 @@ msgstr "Button zum Widerruf der Einwilligung einfügen"
 msgid "Inherit from theme"
 msgstr "Vom Theme übernehmen"
 
-#: includes/Admin/Ajax.php:228
+#: includes/Admin/Ajax.php:234
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr "Unzureichende Berechtigungen."
@@ -666,6 +679,10 @@ msgstr "Einleitungstext"
 #: admin/views/tabs/design.php:339
 msgid "Its colors live in the Colors card below."
 msgstr "Die Farben dafür finden Sie unten in der Karte „Farben“."
+
+#: admin/views/tabs/settings.php:60
+msgid "Keep consent records for"
+msgstr "Einwilligungen aufbewahren für"
 
 #: includes/Scanner/CookieScanner.php:38
 msgid "Keeps track of the contents of your shopping cart."
@@ -815,6 +832,10 @@ msgstr "Es steht nichts für Sie an"
 #: admin/views/tabs/dashboard.php:57
 msgid "Off"
 msgstr "Aus"
+
+#: admin/views/tabs/settings.php:80
+msgid "Older records are deleted automatically, once a day, and cannot be restored. A change here takes effect within a day. Export the log first if you need a copy."
+msgstr "Ältere Einträge werden automatisch einmal täglich gelöscht und können nicht wiederhergestellt werden. Eine Änderung wird innerhalb eines Tages wirksam. Exportieren Sie das Protokoll vorher, wenn Sie eine Kopie benötigen."
 
 #: templates/cookie-policy.php:89
 msgid "Only set after your consent."
@@ -1028,7 +1049,7 @@ msgstr "Jetzt scannen"
 msgid "Scanning cookies…"
 msgstr "Cookies werden gescannt…"
 
-#: includes/Admin/Ajax.php:224
+#: includes/Admin/Ajax.php:230
 msgid "Security check failed."
 msgstr "Sicherheitsprüfung fehlgeschlagen."
 
@@ -1210,7 +1231,7 @@ msgstr "Diese Cookies speichern Ihre Einstellungen und persönlichen Auswahlmög
 msgid "These services are automatically blocked until the appropriate consent is given:"
 msgstr "Diese Dienste werden automatisch blockiert, bis die entsprechende Einwilligung erteilt wurde:"
 
-#: admin/views/tabs/settings.php:93
+#: admin/views/tabs/settings.php:124
 msgid "This page should contain the shortcode: "
 msgstr "Diese Seite sollte folgenden Shortcode enthalten: "
 
@@ -1296,7 +1317,7 @@ msgstr "Besucher müssen nachlesen können, wofür jedes Cookie dient, bevor sie
 msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
 msgstr "Besucher müssen ihre Einwilligung ebenso einfach widerrufen können, wie sie sie erteilt haben — entweder über den schwebenden Button oder über einen [privento_revoke]-Link, den Sie selbst platzieren."
 
-#: admin/views/tabs/settings.php:60
+#: admin/views/tabs/settings.php:91
 msgid "WCAG 2.1 AA compliant mode"
 msgstr "WCAG-2.1-AA-konformer Modus"
 
@@ -1364,7 +1385,7 @@ msgstr "Cookie-Richtlinie"
 msgid "theme"
 msgstr "dem Theme"
 
-#: admin/views/tabs/settings.php:86
+#: admin/views/tabs/settings.php:117
 msgid "— Select page —"
 msgstr "— Seite auswählen —"
 

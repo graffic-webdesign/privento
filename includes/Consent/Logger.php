@@ -47,6 +47,71 @@ class Logger {
     }
 
     // -------------------------------------------------------------------------
+    // Retention
+    // -------------------------------------------------------------------------
+
+    /** WP-Cron hook that runs the daily cleanup. */
+    public const CLEANUP_HOOK = 'privento_purge_logs';
+
+    /** The periods offered in Settings, in months. 0 keeps records forever. */
+    public const RETENTION_CHOICES = [ 0, 12, 24, 36, 60 ];
+
+    /** Hooks the cleanup and makes sure it is scheduled. */
+    public static function register_cleanup(): void {
+        add_action( self::CLEANUP_HOOK, [ self::class, 'run_cleanup' ] );
+        if ( ! wp_next_scheduled( self::CLEANUP_HOOK ) ) {
+            wp_schedule_event( time() + HOUR_IN_SECONDS, 'daily', self::CLEANUP_HOOK );
+        }
+    }
+
+    /** Daily: delete what is older than the period chosen in Settings, if any. */
+    public static function run_cleanup(): void {
+        $months = (int) Settings::get( 'log_retention_months', 0 );
+        if ( $months > 0 ) {
+            ( new self() )->purge_older_than( $months );
+        }
+    }
+
+    /**
+     * Deletes records older than $months months. Returns how many went.
+     *
+     * Never less than twelve months, whatever is asked: a consent can be valid
+     * for a year and has to stay provable for as long. Works in batches so a
+     * large log does not lock the table, and stops after twenty of them — the
+     * rest goes on the next daily run.
+     */
+    public function purge_older_than( int $months ): int {
+        global $wpdb;
+
+        if ( $months < 12 ) {
+            return 0;
+        }
+
+        // Records are written in UTC.
+        $cutoff  = gmdate( 'Y-m-d H:i:s', strtotime( "-{$months} months" ) );
+        $deleted = 0;
+
+        for ( $batch = 0; $batch < 20; $batch++ ) {
+            $rows = $wpdb->query(
+                $wpdb->prepare(
+                    // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+                    "DELETE FROM {$this->table} WHERE consent_date < %s LIMIT 5000",
+                    $cutoff
+                )
+            );
+            if ( ! $rows ) {
+                break; // Nothing left, or the query failed.
+            }
+            $deleted += (int) $rows;
+            if ( $rows < 5000 ) {
+                break;
+            }
+        }
+
+        return $deleted;
+    }
+
+    // -------------------------------------------------------------------------
     // Read / Export
     // -------------------------------------------------------------------------
 

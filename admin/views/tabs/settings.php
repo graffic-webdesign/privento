@@ -53,6 +53,37 @@ $s = Settings::all();
 
             <div class="prv-panel">
                 <div class="prv-panel__header">
+                    <h2 class="prv-panel__title"><?php esc_html_e( 'Consent Log', 'privento' ); ?></h2>
+                </div>
+                <div class="prv-panel__body">
+                    <div class="prv-field">
+                        <label class="prv-label" for="log_retention_months"><?php esc_html_e( 'Keep consent records for', 'privento' ); ?></label>
+                        <select name="log_retention_months" id="log_retention_months" class="prv-select">
+                            <?php
+                            $retention = (int) ( $s['log_retention_months'] ?? 0 );
+                            foreach ( \Privento\Consent\Logger::RETENTION_CHOICES as $months ) :
+                            ?>
+                            <option value="<?php echo esc_attr( $months ); ?>" <?php selected( $retention, $months ); ?>>
+                                <?php
+                                if ( 0 === $months ) {
+                                    esc_html_e( 'Forever', 'privento' );
+                                } elseif ( 12 === $months ) {
+                                    esc_html_e( '1 year', 'privento' );
+                                } else {
+                                    /* translators: %d = number of years */
+                                    printf( esc_html__( '%d years', 'privento' ), $months / 12 );
+                                }
+                                ?>
+                            </option>
+                            <?php endforeach; ?>
+                        </select>
+                        <p class="prv-hint"><?php esc_html_e( 'Older records are deleted automatically, once a day, and cannot be restored. A change here takes effect within a day. Export the log first if you need a copy.', 'privento' ); ?></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prv-panel">
+                <div class="prv-panel__header">
                     <h2 class="prv-panel__title"><?php esc_html_e( 'Accessibility (WCAG)', 'privento' ); ?></h2>
                 </div>
                 <div class="prv-panel__body">

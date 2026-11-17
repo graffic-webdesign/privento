@@ -28,6 +28,10 @@ msgstr ""
 msgid "%d days"
 msgstr ""
 
+#: admin/views/tabs/settings.php:74
+msgid "%d years"
+msgstr ""
+
 #: admin/views/tabs/dashboard.php:97
 msgid "%s records"
 msgstr ""
@@ -49,6 +53,7 @@ msgstr ""
 msgid "1 minute"
 msgstr ""
 
+#: admin/views/tabs/settings.php:71
 #: includes/Scanner/CookieScanner.php:25
 msgid "1 year"
 msgstr ""
@@ -117,7 +122,7 @@ msgstr ""
 msgid "Accepted all"
 msgstr ""
 
-#: admin/views/tabs/settings.php:56
+#: admin/views/tabs/settings.php:87
 msgid "Accessibility (WCAG)"
 msgstr ""
 
@@ -268,6 +273,10 @@ msgstr ""
 msgid "Consent ID"
 msgstr ""
 
+#: admin/views/tabs/settings.php:56
+msgid "Consent Log"
+msgstr ""
+
 #: admin/views/layout.php:23
 #: admin/views/tabs/logs.php:20
 #: includes/Admin/Admin.php:43
@@ -321,12 +330,12 @@ msgstr ""
 #: admin/views/layout.php:22
 #: admin/views/tabs/policy.php:22
 #: includes/Admin/Admin.php:42
-#: includes/Core/Installer.php:269
+#: includes/Core/Installer.php:271
 msgid "Cookie Policy"
 msgstr ""
 
-#: admin/views/tabs/settings.php:78
-#: admin/views/tabs/settings.php:82
+#: admin/views/tabs/settings.php:109
+#: admin/views/tabs/settings.php:113
 msgid "Cookie Policy Page"
 msgstr ""
 
@@ -488,7 +497,7 @@ msgstr ""
 msgid "Enable Google Consent Mode v2"
 msgstr ""
 
-#: admin/views/tabs/settings.php:67
+#: admin/views/tabs/settings.php:98
 msgid "Enhanced focus rings"
 msgstr ""
 
@@ -535,6 +544,10 @@ msgstr ""
 
 #: admin/views/tabs/design.php:293
 msgid "Font Family"
+msgstr ""
+
+#: admin/views/tabs/settings.php:69
+msgid "Forever"
 msgstr ""
 
 #: admin/views/tabs/design.php:170
@@ -646,7 +659,7 @@ msgstr ""
 msgid "Inherit from theme"
 msgstr ""
 
-#: includes/Admin/Ajax.php:228
+#: includes/Admin/Ajax.php:234
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr ""
@@ -663,6 +676,10 @@ msgstr ""
 
 #: admin/views/tabs/design.php:339
 msgid "Its colors live in the Colors card below."
+msgstr ""
+
+#: admin/views/tabs/settings.php:60
+msgid "Keep consent records for"
 msgstr ""
 
 #: includes/Scanner/CookieScanner.php:38
@@ -812,6 +829,10 @@ msgstr ""
 
 #: admin/views/tabs/dashboard.php:57
 msgid "Off"
+msgstr ""
+
+#: admin/views/tabs/settings.php:80
+msgid "Older records are deleted automatically, once a day, and cannot be restored. A change here takes effect within a day. Export the log first if you need a copy."
 msgstr ""
 
 #: templates/cookie-policy.php:89
@@ -1026,7 +1047,7 @@ msgstr ""
 msgid "Scanning cookies…"
 msgstr ""
 
-#: includes/Admin/Ajax.php:224
+#: includes/Admin/Ajax.php:230
 msgid "Security check failed."
 msgstr ""
 
@@ -1208,7 +1229,7 @@ msgstr ""
 msgid "These services are automatically blocked until the appropriate consent is given:"
 msgstr ""
 
-#: admin/views/tabs/settings.php:93
+#: admin/views/tabs/settings.php:124
 msgid "This page should contain the shortcode: "
 msgstr ""
 
@@ -1294,7 +1315,7 @@ msgstr ""
 msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
 msgstr ""
 
-#: admin/views/tabs/settings.php:60
+#: admin/views/tabs/settings.php:91
 msgid "WCAG 2.1 AA compliant mode"
 msgstr ""
 
@@ -1362,7 +1383,7 @@ msgstr ""
 msgid "theme"
 msgstr ""
 
-#: admin/views/tabs/settings.php:86
+#: admin/views/tabs/settings.php:117
 msgid "— Select page —"
 msgstr ""
 

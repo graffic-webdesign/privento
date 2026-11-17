@@ -188,6 +188,12 @@ class Ajax {
             }
         }
 
+        // Only the offered retention periods; anything else keeps records forever.
+        if ( array_key_exists( 'log_retention_months', $raw ) ) {
+            $months                        = is_scalar( $raw['log_retention_months'] ) ? (int) $raw['log_retention_months'] : 0;
+            $clean['log_retention_months'] = in_array( $months, \Privento\Consent\Logger::RETENTION_CHOICES, true ) ? $months : 0;
+        }
+
         foreach ( $bool_fields as $f ) {
             if ( array_key_exists( $f, $raw ) ) {
                 $clean[ $f ] = $raw[ $f ] ? '1' : '0';

@@ -30,6 +30,10 @@ msgstr "%d samtycken sparade. IP-adresser hashas för att följa GDPR."
 msgid "%d days"
 msgstr "%d dagar"
 
+#: admin/views/tabs/settings.php:74
+msgid "%d years"
+msgstr "%d år"
+
 #: admin/views/tabs/dashboard.php:97
 msgid "%s records"
 msgstr "%s poster"
@@ -51,6 +55,7 @@ msgstr "1 dag"
 msgid "1 minute"
 msgstr "1 minut"
 
+#: admin/views/tabs/settings.php:71
 #: includes/Scanner/CookieScanner.php:25
 msgid "1 year"
 msgstr "1 år"
@@ -119,7 +124,7 @@ msgstr "Accepterade alla"
 msgid "Accepted all"
 msgstr "Accepterade alla"
 
-#: admin/views/tabs/settings.php:56
+#: admin/views/tabs/settings.php:87
 msgid "Accessibility (WCAG)"
 msgstr "Tillgänglighet (WCAG)"
 
@@ -270,6 +275,10 @@ msgstr "Samtyckets giltighetstid"
 msgid "Consent ID"
 msgstr "Samtyckes-ID"
 
+#: admin/views/tabs/settings.php:56
+msgid "Consent Log"
+msgstr "Samtyckeslogg"
+
 #: admin/views/layout.php:23
 #: admin/views/tabs/logs.php:20
 #: includes/Admin/Admin.php:43
@@ -323,12 +332,12 @@ msgstr "Cookienamn"
 #: admin/views/layout.php:22
 #: admin/views/tabs/policy.php:22
 #: includes/Admin/Admin.php:42
-#: includes/Core/Installer.php:269
+#: includes/Core/Installer.php:271
 msgid "Cookie Policy"
 msgstr "Cookiepolicy"
 
-#: admin/views/tabs/settings.php:78
-#: admin/views/tabs/settings.php:82
+#: admin/views/tabs/settings.php:109
+#: admin/views/tabs/settings.php:113
 msgid "Cookie Policy Page"
 msgstr "Cookiepolicysida"
 
@@ -490,7 +499,7 @@ msgstr "Redigera i WordPress"
 msgid "Enable Google Consent Mode v2"
 msgstr "Aktivera Google Consent Mode v2"
 
-#: admin/views/tabs/settings.php:67
+#: admin/views/tabs/settings.php:98
 msgid "Enhanced focus rings"
 msgstr "Förstärkta fokusringar"
 
@@ -538,6 +547,10 @@ msgstr "Flytande knapp"
 #: admin/views/tabs/design.php:293
 msgid "Font Family"
 msgstr "Typsnitt"
+
+#: admin/views/tabs/settings.php:69
+msgid "Forever"
+msgstr "För alltid"
 
 #: admin/views/tabs/design.php:170
 msgid "From %s"
@@ -648,7 +661,7 @@ msgstr "Inkludera knapp för att återkalla samtycke"
 msgid "Inherit from theme"
 msgstr "Ärv från temat"
 
-#: includes/Admin/Ajax.php:228
+#: includes/Admin/Ajax.php:234
 #: includes/Scanner/CookieScanner.php:83
 msgid "Insufficient permissions."
 msgstr "Otillräckliga behörigheter."
@@ -666,6 +679,10 @@ msgstr "Inledande text"
 #: admin/views/tabs/design.php:339
 msgid "Its colors live in the Colors card below."
 msgstr "Dess färger hittar du i kortet Färger nedan."
+
+#: admin/views/tabs/settings.php:60
+msgid "Keep consent records for"
+msgstr "Spara samtycken i"
 
 #: includes/Scanner/CookieScanner.php:38
 msgid "Keeps track of the contents of your shopping cart."
@@ -815,6 +832,10 @@ msgstr "Inget väntar på dig"
 #: admin/views/tabs/dashboard.php:57
 msgid "Off"
 msgstr "Av"
+
+#: admin/views/tabs/settings.php:80
+msgid "Older records are deleted automatically, once a day, and cannot be restored. A change here takes effect within a day. Export the log first if you need a copy."
+msgstr "Äldre poster raderas automatiskt en gång per dygn och kan inte återställas. En ändring här börjar gälla inom ett dygn. Exportera loggen först om du behöver en kopia."
 
 #: templates/cookie-policy.php:89
 msgid "Only set after your consent."
@@ -1028,7 +1049,7 @@ msgstr "Skanna nu"
 msgid "Scanning cookies…"
 msgstr "Skannar cookies…"
 
-#: includes/Admin/Ajax.php:224
+#: includes/Admin/Ajax.php:230
 msgid "Security check failed."
 msgstr "Säkerhetskontrollen misslyckades."
 
@@ -1210,7 +1231,7 @@ msgstr "De här cookies kommer ihåg dina inställningar och personliga val."
 msgid "These services are automatically blocked until the appropriate consent is given:"
 msgstr "De här tjänsterna blockeras automatiskt tills rätt samtycke har getts:"
 
-#: admin/views/tabs/settings.php:93
+#: admin/views/tabs/settings.php:124
 msgid "This page should contain the shortcode: "
 msgstr "Den här sidan ska innehålla kortkoden: "
 
@@ -1296,7 +1317,7 @@ msgstr "Besökare måste kunna läsa vad varje cookie används till innan de bes
 msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
 msgstr "Besökare måste kunna återkalla sitt samtycke lika enkelt som de gav det — antingen via den flytande knappen eller en [privento_revoke]-länk som du själv placerar ut."
 
-#: admin/views/tabs/settings.php:60
+#: admin/views/tabs/settings.php:91
 msgid "WCAG 2.1 AA compliant mode"
 msgstr "Läge som uppfyller WCAG 2.1 AA"
 
@@ -1364,7 +1385,7 @@ msgstr "cookiepolicy"
 msgid "theme"
 msgstr "temat"
 
-#: admin/views/tabs/settings.php:86
+#: admin/views/tabs/settings.php:117
 msgid "— Select page —"
 msgstr "— Välj sida —"
 

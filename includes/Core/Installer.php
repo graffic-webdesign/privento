@@ -48,6 +48,7 @@ class Installer {
      * Runs on plugin deactivation.
      */
     public static function deactivate(): void {
+        wp_clear_scheduled_hook( \Privento\Consent\Logger::CLEANUP_HOOK );
         flush_rewrite_rules();
     }
 
@@ -157,6 +158,7 @@ class Installer {
 
                 // Consent management
                 'consent_duration_days' => 180,
+                'log_retention_months'  => 0,     // 0 = keep consent records forever
 
                 // Integrations
                 'gcm_enabled'           => '0',

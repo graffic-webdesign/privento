@@ -22,6 +22,7 @@ foreach ( [
 }
 
 delete_transient( 'privento_revoke_link_found' );
+wp_clear_scheduled_hook( 'privento_purge_logs' );
 delete_site_transient( 'privento_update' );
 
 // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery

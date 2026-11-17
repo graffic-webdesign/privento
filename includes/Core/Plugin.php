@@ -57,6 +57,7 @@ final class Plugin {
         // from cron, where is_admin() is false.
         new Updater();
         new \Privento\Consent\Manager();
+        \Privento\Consent\Logger::register_cleanup();
         new \Privento\Public\Frontend();
 
         // Admin-only modules
