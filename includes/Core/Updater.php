@@ -52,14 +52,35 @@ class Updater {
             return false;
         }
 
-        return [
+        $update = [
             'id'           => 'https://github.com/' . self::REPO,
             'slug'         => 'privento',
             'version'      => $release['version'],
             'url'          => $release['url'],
             'package'      => $release['package'],
-            'requires_php' => '8.0',
+            'requires_php' => ( $release['requires_php'] ?? '' ) ?: '8.0',
         ];
+
+        // Without this WordPress prints "Compatibility: Unknown" beside the update.
+        $tested = self::tested_for_this_site( $release['tested'] ?? '' );
+        if ( $tested ) {
+            $update['tested'] = $tested;
+        }
+
+        return $update;
+    }
+
+    /**
+     * "Tested up to: 7.1" means every 7.1.x, but WordPress compares the value
+     * with its full version number, where 7.1 is older than 7.1.4. Spell the
+     * branch out as the running version, the way WordPress.org does.
+     */
+    private static function tested_for_this_site( string $tested ): string {
+        $running = (string) get_bloginfo( 'version' );
+        if ( $tested && 0 === strpos( $running, $tested . '.' ) ) {
+            return $running;
+        }
+        return $tested;
     }
 
     /**
@@ -111,8 +132,9 @@ class Updater {
             'version'       => $release['version'],
             'author'        => '<a href="https://graffic.dk">Graffic</a>',
             'homepage'      => 'https://github.com/' . self::REPO,
-            'requires'      => '6.0',
-            'requires_php'  => '8.0',
+            'requires'      => ( $release['requires'] ?? '' ) ?: '6.0',
+            'requires_php'  => ( $release['requires_php'] ?? '' ) ?: '8.0',
+            'tested'        => self::tested_for_this_site( $release['tested'] ?? '' ),
             'download_link' => $release['package'],
             'sections'      => [
                 // Release notes are written on GitHub — plain text, never markup.
@@ -127,20 +149,32 @@ class Updater {
      * a release without the built zip (GitHub's automatic source archive has
      * the wrong folder name and includes development files).
      *
-     * @return array{version: string, package: string, url: string, notes: string}|null
+     * @return array{version: string, package: string, url: string, notes: string, tested: string, requires: string, requires_php: string}|null
      */
     public static function parse_release( array $release ): ?array {
         if ( empty( $release['tag_name'] ) || ! empty( $release['draft'] ) || ! empty( $release['prerelease'] ) ) {
             return null;
         }
 
+        // The release workflow ends the notes with a hidden marker copied from
+        // readme.txt: <!-- privento: tested=7.1 requires=6.0 requires_php=8.0 -->
+        $notes = (string) ( $release['body'] ?? '' );
+        $meta  = [ 'tested' => '', 'requires' => '', 'requires_php' => '' ];
+        if ( preg_match( '/<!--\s*privento:(.*?)-->/s', $notes, $marker ) ) {
+            preg_match_all( '/(tested|requires_php|requires)=([0-9.]+)/', $marker[1], $pairs, PREG_SET_ORDER );
+            foreach ( $pairs as $pair ) {
+                $meta[ $pair[1] ] = $pair[2];
+            }
+            $notes = trim( str_replace( $marker[0], '', $notes ) );
+        }
+
         foreach ( (array) ( $release['assets'] ?? [] ) as $asset ) {
             if ( self::ASSET === ( $asset['name'] ?? '' ) && ! empty( $asset['browser_download_url'] ) ) {
-                return [
+                return $meta + [
                     'version' => ltrim( (string) $release['tag_name'], 'v' ),
                     'package' => (string) $asset['browser_download_url'],
                     'url'     => (string) ( $release['html_url'] ?? 'https://github.com/' . self::REPO ),
-                    'notes'   => (string) ( $release['body'] ?? '' ),
+                    'notes'   => $notes,
                 ];
             }
         }

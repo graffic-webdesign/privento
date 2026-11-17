@@ -46,6 +46,13 @@ jobs:
         run: |
           awk -v v="= $VERSION =" '$0 == v && !seen {on=1; seen=1; next} /^=/ {on=0} on' readme.txt > notes.md
           test -s notes.md
+          # Hidden marker the plugin's updater reads, so WordPress can show
+          # "Compatibility: 100%" beside the update instead of "Unknown".
+          tested=$(sed -n 's/^Tested up to: *//p' readme.txt)
+          requires=$(sed -n 's/^Requires at least: *//p' readme.txt)
+          php=$(sed -n 's/^Requires PHP: *//p' readme.txt)
+          test -n "$tested" && test -n "$requires" && test -n "$php"
+          echo "<!-- privento: tested=$tested requires=$requires requires_php=$php -->" >> notes.md
 
       - name: Publish
         env:

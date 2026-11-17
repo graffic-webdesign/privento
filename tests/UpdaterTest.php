@@ -118,3 +118,36 @@ $fire();
 t_assert( ! isset( $GLOBALS['wp_transients']['privento_update'] ), 'check_again_forgets_the_cached_release' );
 t_assert( 0 === $GLOBALS['wp_transients']['update_plugins']['value']->last_checked, 'check_again_makes_wordpress_recheck_plugins' );
 $_GET = [];
+
+// Compatibility. WordPress prints "Compatibility with WordPress x: Unknown"
+// next to an update that does not say what it was tested with. The release
+// workflow writes that into the release notes as a hidden marker.
+$marked = [ 'body' => "Fixes.\n\n<!-- privento: tested=7.1 requires=6.0 requires_php=8.0 -->" ] + $release;
+$parsed = Updater::parse_release( $marked );
+t_assert( '7.1' === $parsed['tested'] && '6.0' === $parsed['requires'] && '8.0' === $parsed['requires_php'], 'parse_release_reads_compatibility_marker' );
+t_assert( 'Fixes.' === $parsed['notes'], 'parse_release_keeps_the_marker_out_of_the_notes' );
+t_assert( '' === Updater::parse_release( $release )['tested'], 'parse_release_without_marker_claims_nothing' );
+
+// "Tested up to: 7.1" covers every 7.1.x. WordPress compares against its full
+// version number, so the branch has to be spelled out as the running version.
+t_reset();
+$GLOBALS['t_release']  = $marked;
+$GLOBALS['wp_http']    = $http_ok;
+$GLOBALS['wp_version'] = '7.1.4';
+$update                = ( new Updater() )->check( false, [], PRIVENTO_BASENAME, [] );
+t_assert( '7.1.4' === $update['tested'], 'check_reports_tested_for_the_running_patch_release' );
+
+t_reset();
+$GLOBALS['wp_http']    = $http_ok;
+$GLOBALS['wp_version'] = '7.2';
+$update                = ( new Updater() )->check( false, [], PRIVENTO_BASENAME, [] );
+t_assert( '7.1' === $update['tested'], 'check_does_not_claim_a_newer_wordpress' );
+$info = ( new Updater() )->details( false, 'plugin_information', (object) [ 'slug' => 'privento' ] );
+t_assert( '7.1' === $info->tested && '6.0' === $info->requires, 'details_carry_compatibility' );
+
+t_reset();
+$GLOBALS['t_release'] = $release;
+$GLOBALS['wp_http']   = $http_ok;
+$update               = ( new Updater() )->check( false, [], PRIVENTO_BASENAME, [] );
+t_assert( ! isset( $update['tested'] ) && '8.0' === $update['requires_php'], 'check_without_marker_omits_tested' );
+unset( $GLOBALS['wp_version'] );
