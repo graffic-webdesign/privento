@@ -4,7 +4,7 @@
  * Plugin URI:  https://github.com/graffic-webdesign/privento
  * Update URI:  https://github.com/graffic-webdesign/privento
  * Description: GDPR cookie consent: consent banner, Google Consent Mode v2, script blocking, consent log and a generated cookie policy. Follows the site language.
- * Version:     1.7.2
+ * Version:     1.7.3
  * Author:      Graffic
  * Author URI:  https://graffic.dk
  * License:     GPL-2.0-or-later
@@ -20,7 +20,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Constants
-define( 'PRIVENTO_VERSION',   '1.7.2' );
+define( 'PRIVENTO_VERSION',   '1.7.3' );
 define( 'PRIVENTO_FILE',      __FILE__ );
 define( 'PRIVENTO_DIR',       plugin_dir_path( __FILE__ ) );
 define( 'PRIVENTO_URL',       plugin_dir_url( __FILE__ ) );

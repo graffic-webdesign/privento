@@ -4,7 +4,7 @@ Tags: gdpr, cookie consent, cookie banner, google consent mode, privacy
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,15 @@ The plugin checks its GitHub repository for a newer release twice a day, as part
 Its settings and the consent log are removed. The Cookie Policy page stays, since it is a normal page on your site. Deactivating removes nothing.
 
 == Changelog ==
+
+= 1.7.3 =
+* Security hardening after a full review of the plugin. No vulnerability was found; these changes close gaps before they become one.
+* The plugin only installs updates that come from its own GitHub releases, and the release process itself is locked down further.
+* Fixed: on sites behind a proxy or CDN, consents could go unrecorded when more than ten visitors answered the banner within a minute. The limit is now sixty per address.
+* Fixed: consent logging failed on installs whose wp-config.php lacks the AUTH_SALT constant.
+* The consent cookie is marked Secure on HTTPS sites, and a damaged or forged cookie simply brings the banner back.
+* Updates now tell WordPress which version they were tested with, so the Updates screen stops saying "Compatibility: Unknown" — from the update after this one.
+* The readme says more plainly which tracking services the script blocker recognises, and which it does not.
 
 = 1.7.2 =
 * Fixed: Dashboard → Updates → Check again did not find a new Privento release when clicked within a minute of opening the screen. It now always looks.
