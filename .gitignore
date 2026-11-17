@@ -1,0 +1,13 @@
+# OS cruft
+Thumbs.db
+.DS_Store
+
+# Editor/tooling
+.idea/
+.vscode/
+.claude/
+.superpowers/
+*.log
+
+# Release builds
+*.zip

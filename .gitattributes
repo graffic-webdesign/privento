@@ -1,0 +1,14 @@
+# Store text with LF so generated files (translations, minified assets) are
+# byte-identical on every machine and CI can check them with git diff.
+* text=auto eol=lf
+*.mo binary
+
+# Development files — kept out of the release zip (git archive).
+/.github        export-ignore
+/bin            export-ignore
+/docs           export-ignore
+/tests          export-ignore
+/.gitattributes export-ignore
+/.gitignore     export-ignore
+/README.md      export-ignore
+/languages/*.po export-ignore

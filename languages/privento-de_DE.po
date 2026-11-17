@@ -1,0 +1,1395 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Privento\n"
+"Report-Msgid-Bugs-To: https://github.com/graffic-webdesign/privento/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: privento\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: admin/views/tabs/dashboard.php:298
+msgid "%1$d / %2$d met"
+msgstr "%1$d / %2$d erfüllt"
+
+#: admin/views/tabs/dashboard.php:176
+msgid "%1$d of %2$d requirements are met. The open one is holding the score down."
+msgstr "%1$d von %2$d Anforderungen sind erfüllt. Die offene Anforderung drückt die Bewertung."
+
+#: admin/views/tabs/dashboard.php:195
+msgid "%1$d of %2$d requirements met"
+msgstr "%1$d von %2$d Anforderungen erfüllt"
+
+#: admin/views/tabs/logs.php:24
+msgid "%d consent records stored. IP addresses are hashed for GDPR compliance."
+msgstr "%d Einwilligungseinträge gespeichert. IP-Adressen werden DSGVO-konform gehasht."
+
+#: admin/views/tabs/dashboard.php:228
+#: admin/views/tabs/settings.php:44
+msgid "%d days"
+msgstr "%d Tage"
+
+#: admin/views/tabs/dashboard.php:97
+msgid "%s records"
+msgstr "%s Einträge"
+
+#: templates/cookie-policy.php:53
+msgid "%s uses cookies and similar technologies to keep the website working, analyse how it is used and improve your experience. This cookie policy describes which cookies we use, what they are used for, and how you manage your preferences."
+msgstr "%s verwendet Cookies und ähnliche Technologien, um den Betrieb der Website sicherzustellen, ihre Nutzung zu analysieren und Ihr Nutzungserlebnis zu verbessern. Diese Cookie-Richtlinie beschreibt, welche Cookies wir verwenden, wofür sie eingesetzt werden und wie Sie Ihre Präferenzen verwalten."
+
+#: admin/views/tabs/policy.php:91
+msgid "-- Select a page --"
+msgstr "-- Seite auswählen --"
+
+#: includes/Scanner/CookieScanner.php:44
+msgid "1 day"
+msgstr "1 Tag"
+
+#: includes/Scanner/CookieScanner.php:51
+#: includes/Scanner/CookieScanner.php:52
+msgid "1 minute"
+msgstr "1 Minute"
+
+#: includes/Scanner/CookieScanner.php:25
+msgid "1 year"
+msgstr "1 Jahr"
+
+#: includes/Scanner/CookieScanner.php:39
+msgid "2 days"
+msgstr "2 Tage"
+
+#: includes/Scanner/CookieScanner.php:26
+msgid "2 years"
+msgstr "2 Jahre"
+
+#: includes/Scanner/CookieScanner.php:50
+msgid "24 hours"
+msgstr "24 Stunden"
+
+#: includes/Scanner/CookieScanner.php:28
+msgid "3 months"
+msgstr "3 Monate"
+
+#: includes/Scanner/CookieScanner.php:55
+msgid "30 minutes"
+msgstr "30 Minuten"
+
+#: includes/Scanner/CookieScanner.php:27
+msgid "6 months"
+msgstr "6 Monate"
+
+#: includes/Scanner/CookieScanner.php:53
+msgid "90 days"
+msgstr "90 Tage"
+
+#: admin/views/tabs/dashboard.php:99
+msgid "A log is your documentation that consent was given, and when."
+msgstr "Ein Protokoll ist Ihr Nachweis, dass und wann eine Einwilligung erteilt wurde."
+
+#: admin/views/tabs/texts.php:73
+msgid "Accept All Button"
+msgstr "Button „Alle akzeptieren“"
+
+#: admin/views/tabs/design.php:39
+msgid "Accept Button"
+msgstr "Akzeptieren-Button"
+
+#: admin/views/tabs/logs.php:41
+msgid "Accept Rate"
+msgstr "Akzeptanzrate"
+
+#: includes/Core/Settings.php:70
+msgid "Accept all"
+msgstr "Alle akzeptieren"
+
+#: admin/views/tabs/design.php:448
+msgid "Accept button"
+msgstr "Akzeptieren-Button"
+
+#: admin/views/tabs/dashboard.php:207
+msgid "Accept rate"
+msgstr "Akzeptanzrate"
+
+#: admin/views/tabs/logs.php:45
+msgid "Accepted All"
+msgstr "Alle akzeptiert"
+
+#: admin/views/tabs/dashboard.php:275
+msgid "Accepted all"
+msgstr "Alle akzeptiert"
+
+#: admin/views/tabs/settings.php:72
+msgid "Accessibility (WCAG)"
+msgstr "Barrierefreiheit (WCAG)"
+
+#: admin/views/tabs/dashboard.php:308
+msgid "All clear"
+msgstr "Alles in Ordnung"
+
+#: includes/Public/Frontend.php:246
+msgid "Always active"
+msgstr "Immer aktiv"
+
+#: admin/views/tabs/policy.php:85
+msgid "Assigned Policy Page"
+msgstr "Zugewiesene Richtlinienseite"
+
+#: admin/views/tabs/integrations.php:135
+msgid "Auto-Blocked Services"
+msgstr "Automatisch blockierte Dienste"
+
+#: admin/views/tabs/policy.php:23
+msgid "Auto-generate and manage your GDPR-compliant Cookie Policy page"
+msgstr "Erstellen und verwalten Sie Ihre DSGVO-konforme Cookie-Richtlinie automatisch"
+
+#: admin/views/tabs/design.php:33
+#: admin/views/tabs/design.php:42
+#: admin/views/tabs/design.php:52
+#: admin/views/tabs/design.php:62
+#: admin/views/tabs/design.php:72
+#: admin/views/tabs/design.php:82
+msgid "Background"
+msgstr "Hintergrund"
+
+#: admin/views/tabs/design.php:30
+msgid "Banner"
+msgstr "Banner"
+
+#: admin/views/tabs/texts.php:32
+msgid "Banner Content"
+msgstr "Banner-Inhalt"
+
+#: admin/views/tabs/design.php:203
+msgid "Banner Design"
+msgstr "Banner-Design"
+
+#: admin/views/tabs/design.php:224
+msgid "Banner Position"
+msgstr "Banner-Position"
+
+#: admin/views/tabs/dashboard.php:66
+msgid "Banner is active"
+msgstr "Banner ist aktiv"
+
+#: admin/views/tabs/design.php:443
+msgid "Banner text"
+msgstr "Banner-Text"
+
+#: admin/views/tabs/design.php:309
+msgid "Base Font Size"
+msgstr "Basis-Schriftgröße"
+
+#: admin/views/tabs/texts.php:45
+msgid "Basic HTML allowed: <a>, <strong>, <em>"
+msgstr "Einfaches HTML erlaubt: <a>, <strong>, <em>"
+
+#: admin/views/tabs/texts.php:43
+msgid "Body Text"
+msgstr "Fließtext"
+
+#: admin/views/tabs/design.php:264
+msgid "Border Radius (px)"
+msgstr "Eckenradius (px)"
+
+#: admin/views/tabs/dashboard.php:36
+#: admin/views/tabs/design.php:230
+msgid "Bottom Bar"
+msgstr "Leiste unten"
+
+#: admin/views/tabs/design.php:335
+msgid "Bottom Left"
+msgstr "Unten links"
+
+#: admin/views/tabs/design.php:336
+msgid "Bottom Right"
+msgstr "Unten rechts"
+
+#: admin/views/tabs/texts.php:68
+msgid "Button Labels"
+msgstr "Button-Beschriftungen"
+
+#: admin/views/tabs/dashboard.php:387
+msgid "CSV for compliance audits"
+msgstr "CSV für Compliance-Prüfungen"
+
+#: admin/views/tabs/design.php:465
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: admin/views/tabs/texts.php:107
+msgid "Category"
+msgstr "Kategorie"
+
+#: admin/views/tabs/dashboard.php:37
+#: admin/views/tabs/design.php:234
+msgid "Center Modal"
+msgstr "Zentriertes Modal"
+
+#: templates/cookie-policy.php:157
+msgid "Changes to this cookie policy"
+msgstr "Änderungen dieser Cookie-Richtlinie"
+
+#: admin/views/tabs/policy.php:49
+msgid "Click \"Generate\" to create one automatically."
+msgstr "Klicken Sie auf „Erstellen“, um automatisch eine Seite anzulegen."
+
+#: admin/views/tabs/cookies.php:49
+msgid "Click \"Scan Now\" to detect cookies on your website."
+msgstr "Klicken Sie auf „Jetzt scannen“, um Cookies auf Ihrer Website zu erkennen."
+
+#: admin/views/tabs/design.php:364
+msgid "Colors"
+msgstr "Farben"
+
+#: admin/views/tabs/dashboard.php:376
+msgid "Colors, fonts, placement"
+msgstr "Farben, Schriften, Platzierung"
+
+#: admin/views/tabs/dashboard.php:294
+msgid "Compliance requirements"
+msgstr "Compliance-Anforderungen"
+
+#: admin/views/tabs/dashboard.php:166
+msgid "Compliance score"
+msgstr "Compliance-Bewertung"
+
+#: admin/views/tabs/dashboard.php:391
+msgid "Configure integrations"
+msgstr "Integrationen konfigurieren"
+
+#: admin/views/tabs/integrations.php:18
+msgid "Connect analytics, tag managers, and advertising platforms"
+msgstr "Analyse-Tools, Tag-Manager und Werbeplattformen verbinden"
+
+#: admin/views/tabs/settings.php:31
+msgid "Consent Duration"
+msgstr "Gültigkeitsdauer der Einwilligung"
+
+#: admin/views/tabs/logs.php:66
+msgid "Consent ID"
+msgstr "Einwilligungs-ID"
+
+#: admin/views/layout.php:23
+#: admin/views/tabs/logs.php:20
+#: includes/Admin/Admin.php:43
+msgid "Consent Logs"
+msgstr "Einwilligungsprotokolle"
+
+#: admin/views/tabs/dashboard.php:189
+msgid "Consent Mode v2 active"
+msgstr "Consent Mode v2 aktiv"
+
+#: admin/views/tabs/dashboard.php:190
+msgid "Consent Mode v2 off"
+msgstr "Consent Mode v2 aus"
+
+#: admin/views/tabs/settings.php:35
+msgid "Consent Valid For (days)"
+msgstr "Einwilligung gültig für (Tage)"
+
+#: admin/views/tabs/dashboard.php:95
+msgid "Consent logs recording"
+msgstr "Einwilligungen werden protokolliert"
+
+#: admin/views/tabs/logs.php:67
+msgid "Consented"
+msgstr "Akzeptiert"
+
+#: admin/views/tabs/dashboard.php:243
+msgid "Consents per day"
+msgstr "Einwilligungen pro Tag"
+
+#: includes/Scanner/CookieScanner.php:53
+msgid "Contains campaign-related information."
+msgstr "Enthält kampagnenbezogene Informationen."
+
+#: admin/views/tabs/design.php:456
+msgid "Contrast is measured against WCAG 2.1 AA (4.5:1 for text)."
+msgstr "Der Kontrast wird anhand von WCAG 2.1 AA geprüft (4,5:1 für Text)."
+
+#: admin/views/tabs/design.php:365
+msgid "Controls how the consent banner looks across the site."
+msgstr "Legt fest, wie das Einwilligungsbanner auf der gesamten Website aussieht."
+
+#: includes/Public/Frontend.php:272
+msgid "Cookie"
+msgstr "Cookie"
+
+#: admin/views/tabs/cookies.php:75
+msgid "Cookie Name"
+msgstr "Cookie-Name"
+
+#: admin/views/layout.php:22
+#: admin/views/tabs/policy.php:22
+#: includes/Admin/Admin.php:42
+#: includes/Core/Installer.php:270
+msgid "Cookie Policy"
+msgstr "Cookie-Richtlinie"
+
+#: admin/views/tabs/settings.php:94
+#: admin/views/tabs/settings.php:98
+msgid "Cookie Policy Page"
+msgstr "Seite der Cookie-Richtlinie"
+
+#: admin/views/tabs/policy.php:40
+msgid "Cookie Policy is live"
+msgstr "Cookie-Richtlinie ist veröffentlicht"
+
+#: includes/Admin/Ajax.php:98
+msgid "Cookie Policy page created/updated successfully."
+msgstr "Die Seite der Cookie-Richtlinie wurde erfolgreich erstellt/aktualisiert."
+
+#: admin/views/tabs/dashboard.php:79
+msgid "Cookie Policy page exists"
+msgstr "Seite der Cookie-Richtlinie vorhanden"
+
+#: admin/views/layout.php:20
+#: admin/views/tabs/cookies.php:20
+msgid "Cookie Scanner"
+msgstr "Cookie-Scanner"
+
+#: includes/Public/Frontend.php:305
+msgid "Cookie Settings"
+msgstr "Cookie-Einstellungen"
+
+#: admin/views/tabs/dashboard.php:347
+msgid "Cookie categories"
+msgstr "Cookie-Kategorien"
+
+#: includes/Public/Frontend.php:154
+msgid "Cookie consent"
+msgstr "Cookie-Einwilligung"
+
+#: admin/views/tabs/texts.php:55
+msgid "Cookie policy link"
+msgstr "Link zur Cookie-Richtlinie"
+
+#: admin/views/tabs/dashboard.php:87
+msgid "Cookie scan completed"
+msgstr "Cookie-Scan durchgeführt"
+
+#: includes/Consent/Manager.php:180
+#: includes/Core/Settings.php:72
+msgid "Cookie settings"
+msgstr "Cookie-Einstellungen"
+
+#: includes/Scanner/CookieScanner.php:41
+msgid "CookieYes sets this cookie to remember the consent preferences of users, so that their preferences are respected on subsequent visits."
+msgstr "CookieYes setzt dieses Cookie, um die Einwilligungspräferenzen der Nutzer zu speichern, damit diese bei späteren Besuchen berücksichtigt werden."
+
+#: includes/Admin/Admin.php:40
+msgid "Cookies & Scanner"
+msgstr "Cookies & Scanner"
+
+#: templates/cookie-policy.php:68
+msgid "Cookies are small text files stored in your browser when you visit a website. They are used to remember information about your visit, such as your preferences or whether you have accepted cookies, and can make your experience more personal and seamless."
+msgstr "Cookies sind kleine Textdateien, die beim Besuch einer Website in Ihrem Browser gespeichert werden. Sie dienen dazu, Informationen über Ihren Besuch zu speichern, etwa Ihre Präferenzen oder ob Sie Cookies akzeptiert haben, und können Ihr Nutzungserlebnis persönlicher und reibungsloser machen."
+
+#: admin/views/tabs/dashboard.php:234
+msgid "Cookies detected"
+msgstr "Erkannte Cookies"
+
+#: templates/cookie-policy.php:69
+msgid "Cookies do not contain personal information such as your name or email address, and cannot transfer viruses or other software."
+msgstr "Cookies enthalten keine persönlichen Angaben wie Ihren Namen oder Ihre E-Mail-Adresse und können weder Viren noch andere Software übertragen."
+
+#: admin/views/tabs/design.php:345
+#: admin/views/tabs/policy.php:67
+msgid "Copy"
+msgstr "Kopieren"
+
+#: admin/views/tabs/dashboard.php:39
+#: admin/views/tabs/design.php:242
+msgid "Corner Left"
+msgstr "Ecke links"
+
+#: admin/views/tabs/dashboard.php:38
+#: admin/views/tabs/design.php:238
+msgid "Corner Right"
+msgstr "Ecke rechts"
+
+#: admin/views/tabs/dashboard.php:364
+msgid "Count is cookies found by the scanner; the bar is how often visitors granted that category."
+msgstr "Die Zahl gibt die vom Scanner gefundenen Cookies an; der Balken zeigt, wie oft Besucher dieser Kategorie zugestimmt haben."
+
+#: admin/views/tabs/logs.php:69
+msgid "Country"
+msgstr "Land"
+
+#: admin/views/tabs/dashboard.php:83
+msgid "Create"
+msgstr "Erstellen"
+
+#: admin/views/tabs/texts.php:18
+msgid "Customize all visible text in the cookie banner. Leave a field empty to use the translation for the site language."
+msgstr "Passen Sie alle sichtbaren Texte des Cookie-Banners an. Lassen Sie ein Feld leer, um die Übersetzung für die Website-Sprache zu verwenden."
+
+#: admin/views/tabs/dashboard.php:375
+msgid "Customize banner"
+msgstr "Banner anpassen"
+
+#: admin/views/tabs/design.php:204
+msgid "Customize the look and feel of your cookie consent banner"
+msgstr "Passen Sie das Erscheinungsbild Ihres Cookie-Banners an"
+
+#: admin/views/tabs/design.php:103
+msgid "Dark"
+msgstr "Dunkel"
+
+#: admin/views/layout.php:17
+#: includes/Admin/Admin.php:128
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: admin/views/tabs/logs.php:65
+msgid "Date"
+msgstr "Datum"
+
+#: admin/views/tabs/design.php:99
+msgid "Default"
+msgstr "Standard"
+
+#: admin/views/tabs/integrations.php:47
+msgid "Default all signals to \"Denied\" before consent"
+msgstr "Alle Signale vor der Einwilligung standardmäßig auf „Denied“ (abgelehnt) setzen"
+
+#: admin/views/tabs/cookies.php:77
+#: admin/views/tabs/texts.php:119
+#: includes/Public/Frontend.php:280
+msgid "Description"
+msgstr "Beschreibung"
+
+#: admin/views/layout.php:18
+#: includes/Admin/Admin.php:38
+#: includes/Admin/Admin.php:129
+msgid "Design"
+msgstr "Design"
+
+#: admin/views/tabs/design.php:413
+msgid "Desktop"
+msgstr "Desktop"
+
+#: admin/views/tabs/design.php:274
+msgid "Drop Shadow"
+msgstr "Schlagschatten"
+
+#: includes/Public/Frontend.php:276
+msgid "Duration"
+msgstr "Dauer"
+
+#: admin/views/tabs/settings.php:49
+msgid "EDPB recommends a maximum of 6 months (180 days)."
+msgstr "Der EDSA empfiehlt höchstens 6 Monate (180 Tage)."
+
+#: admin/views/tabs/policy.php:43
+msgid "Edit in WordPress"
+msgstr "In WordPress bearbeiten"
+
+#: admin/views/tabs/integrations.php:40
+msgid "Enable Google Consent Mode v2"
+msgstr "Google Consent Mode v2 aktivieren"
+
+#: admin/views/tabs/settings.php:83
+msgid "Enhanced focus rings"
+msgstr "Verstärkte Fokusrahmen"
+
+#: admin/views/tabs/dashboard.php:316
+msgid "Every requirement below is met. Re-scan after you add or remove tracking."
+msgstr "Alle unten aufgeführten Anforderungen sind erfüllt. Scannen Sie erneut, nachdem Sie Tracking hinzugefügt oder entfernt haben."
+
+#: admin/views/tabs/dashboard.php:181
+msgid "Every requirement is met."
+msgstr "Alle Anforderungen sind erfüllt."
+
+#: admin/views/tabs/logs.php:70
+msgid "Expires"
+msgstr "Läuft ab"
+
+#: templates/cookie-policy.php:99
+msgid "Expiry"
+msgstr "Ablauf"
+
+#: admin/views/tabs/logs.php:29
+msgid "Export CSV"
+msgstr "CSV exportieren"
+
+#: includes/Admin/Admin.php:117
+msgid "Export all consent logs as CSV?"
+msgstr "Alle Einwilligungsprotokolle als CSV exportieren?"
+
+#: admin/views/tabs/dashboard.php:386
+msgid "Export consent log"
+msgstr "Einwilligungsprotokoll exportieren"
+
+#: admin/views/tabs/dashboard.php:152
+msgid "Export log"
+msgstr "Protokoll exportieren"
+
+#: admin/views/tabs/design.php:79
+#: admin/views/tabs/design.php:322
+msgid "Floating Settings Button"
+msgstr "Schwebender Einstellungs-Button"
+
+#: admin/views/tabs/dashboard.php:53
+msgid "Floating button"
+msgstr "Schwebender Button"
+
+#: admin/views/tabs/design.php:293
+msgid "Font Family"
+msgstr "Schriftfamilie"
+
+#: admin/views/tabs/design.php:170
+msgid "From %s"
+msgstr "Aus %s"
+
+#: admin/views/tabs/design.php:385
+msgid "From theme"
+msgstr "Aus dem Theme"
+
+#: admin/views/tabs/integrations.php:106
+msgid "GA4 Measurement ID"
+msgstr "GA4-Mess-ID"
+
+#: admin/views/tabs/integrations.php:104
+msgid "GA4 is only loaded when Statistics consent is granted. Leave blank if you're loading GA via GTM."
+msgstr "GA4 wird nur geladen, wenn die Einwilligung für Statistiken erteilt wurde. Lassen Sie das Feld leer, wenn Sie GA über GTM laden."
+
+#: admin/views/tabs/integrations.php:88
+msgid "GTM Container ID"
+msgstr "GTM-Container-ID"
+
+#: admin/views/tabs/integrations.php:86
+msgid "GTM is loaded after Consent Mode defaults are set. Fire tags via GTM triggers based on consent signals."
+msgstr "GTM wird geladen, nachdem die Standardwerte des Consent Mode gesetzt wurden. Lösen Sie Tags über GTM-Trigger auf Basis der Einwilligungssignale aus."
+
+#: admin/views/tabs/dashboard.php:392
+msgid "GTM, GA4, Meta Pixel"
+msgstr "GTM, GA4, Meta Pixel"
+
+#: admin/views/tabs/settings.php:18
+msgid "General plugin settings and consent management options"
+msgstr "Allgemeine Plugin-Einstellungen und Optionen für die Einwilligungsverwaltung"
+
+#: admin/views/tabs/policy.php:57
+msgid "Generate Policy Page"
+msgstr "Richtlinienseite erstellen"
+
+#: admin/views/tabs/settings.php:56
+msgid "Geo-Targeting"
+msgstr "Geo-Targeting"
+
+#: admin/views/tabs/integrations.php:101
+msgid "Google Analytics 4"
+msgstr "Google Analytics 4"
+
+#: admin/views/tabs/integrations.php:31
+#: templates/cookie-policy.php:124
+msgid "Google Consent Mode v2"
+msgstr "Google Consent Mode v2"
+
+#: admin/views/tabs/dashboard.php:71
+msgid "Google Consent Mode v2 enabled"
+msgstr "Google Consent Mode v2 aktiviert"
+
+#: admin/views/tabs/integrations.php:37
+msgid "Google Consent Mode v2 is required for every site that uses Google advertising or Analytics products and must comply with EU rules. It passes the consent choices of your visitors directly to Google."
+msgstr "Google Consent Mode v2 ist für jede Website erforderlich, die Werbe- oder Analytics-Produkte von Google nutzt und die EU-Vorschriften einhalten muss. Er übermittelt die Einwilligungsentscheidungen Ihrer Besucher direkt an Google."
+
+#: includes/Scanner/CookieScanner.php:62
+msgid "Google DoubleClick advertising cookie."
+msgstr "Werbe-Cookie von Google DoubleClick."
+
+#: admin/views/tabs/integrations.php:83
+msgid "Google Tag Manager"
+msgstr "Google Tag Manager"
+
+#: admin/views/tabs/texts.php:36
+msgid "Headline"
+msgstr "Überschrift"
+
+#: admin/views/tabs/design.php:132
+msgid "High Contrast"
+msgstr "Hoher Kontrast"
+
+#: includes/Scanner/CookieScanner.php:55
+msgid "Hotjar session cookie."
+msgstr "Sitzungs-Cookie von Hotjar."
+
+#: admin/views/tabs/design.php:44
+#: admin/views/tabs/design.php:54
+#: admin/views/tabs/design.php:64
+#: admin/views/tabs/design.php:74
+#: admin/views/tabs/design.php:84
+#: admin/views/tabs/design.php:92
+msgid "Hover"
+msgstr "Hover"
+
+#: admin/views/tabs/design.php:45
+#: admin/views/tabs/design.php:55
+#: admin/views/tabs/design.php:65
+#: admin/views/tabs/design.php:75
+msgid "Hover Text"
+msgstr "Hover-Text"
+
+#: admin/views/tabs/design.php:438
+msgid "Hover the buttons to check their hover colors."
+msgstr "Fahren Sie mit der Maus über die Buttons, um deren Hover-Farben zu prüfen."
+
+#: templates/cookie-policy.php:129
+msgid "How to manage your cookies"
+msgstr "So verwalten Sie Ihre Cookies"
+
+#: admin/views/tabs/design.php:83
+msgid "Icon Color"
+msgstr "Icon-Farbe"
+
+#: admin/views/tabs/policy.php:107
+msgid "Include revoke consent button"
+msgstr "Button zum Widerruf der Einwilligung einfügen"
+
+#: admin/views/tabs/design.php:297
+msgid "Inherit from theme"
+msgstr "Vom Theme übernehmen"
+
+#: includes/Admin/Ajax.php:219
+#: includes/Scanner/CookieScanner.php:83
+msgid "Insufficient permissions."
+msgstr "Unzureichende Berechtigungen."
+
+#: admin/views/layout.php:21
+#: admin/views/tabs/integrations.php:17
+#: includes/Admin/Admin.php:41
+msgid "Integrations"
+msgstr "Integrationen"
+
+#: admin/views/tabs/policy.php:126
+msgid "Intro Text"
+msgstr "Einleitungstext"
+
+#: admin/views/tabs/design.php:339
+msgid "Its colors live in the Colors card below."
+msgstr "Die Farben dafür finden Sie unten in der Karte „Farben“."
+
+#: includes/Scanner/CookieScanner.php:38
+msgid "Keeps track of the contents of your shopping cart."
+msgstr "Speichert den Inhalt Ihres Warenkorbs."
+
+#: includes/Scanner/CookieScanner.php:32
+msgid "Keeps users logged in to WordPress."
+msgstr "Hält Benutzer bei WordPress angemeldet."
+
+#: admin/views/tabs/dashboard.php:244
+msgid "Last 14 days"
+msgstr "Letzte 14 Tage"
+
+#: admin/views/tabs/policy.php:45
+msgid "Last generated: %s"
+msgstr "Zuletzt erstellt: %s"
+
+#: admin/views/tabs/dashboard.php:382
+msgid "Last scan: %s"
+msgstr "Letzter Scan: %s"
+
+#: admin/views/tabs/cookies.php:24
+msgid "Last scan: %s — %d cookies detected."
+msgstr "Letzter Scan: %s — %d Cookies erkannt."
+
+#: templates/cookie-policy.php:41
+msgid "Last updated: %s · Version 1.0"
+msgstr "Zuletzt aktualisiert: %s · Version 1.0"
+
+#: admin/views/tabs/integrations.php:93
+msgid "Leave blank to disable GTM injection."
+msgstr "Leer lassen, um die GTM-Einbindung zu deaktivieren."
+
+#: admin/views/tabs/design.php:91
+msgid "Link"
+msgstr "Link"
+
+#: admin/views/layout.php:58
+msgid "Made by %s"
+msgstr "Entwickelt von %s"
+
+#: includes/Scanner/CookieScanner.php:36
+msgid "Maintains the user session state."
+msgstr "Erhält den Sitzungsstatus des Benutzers aufrecht."
+
+#: admin/views/tabs/texts.php:75
+msgid "Manage Preferences Button"
+msgstr "Button „Präferenzen verwalten“"
+
+#: includes/Public/Frontend.php:304
+msgid "Manage cookie preferences"
+msgstr "Cookie-Präferenzen verwalten"
+
+#: includes/Scanner/CookieScanner.php:39
+msgid "Manages WooCommerce session data."
+msgstr "Verwaltet die Sitzungsdaten von WooCommerce."
+
+#: admin/views/tabs/cookies.php:59
+#: admin/views/tabs/texts.php:97
+#: includes/Core/Settings.php:80
+msgid "Marketing"
+msgstr "Marketing"
+
+#: admin/views/tabs/dashboard.php:335
+msgid "Met"
+msgstr "Erfüllt"
+
+#: admin/views/tabs/integrations.php:118
+msgid "Meta (Facebook) Pixel"
+msgstr "Meta (Facebook) Pixel"
+
+#: admin/views/tabs/design.php:414
+msgid "Mobile"
+msgstr "Mobil"
+
+#: admin/views/tabs/design.php:50
+msgid "Must be just as visible as accept."
+msgstr "Muss genauso gut sichtbar sein wie „Akzeptieren“."
+
+#: admin/views/tabs/texts.php:112
+#: templates/cookie-policy.php:96
+msgid "Name"
+msgstr "Name"
+
+#: admin/views/tabs/cookies.php:56
+#: admin/views/tabs/texts.php:94
+#: includes/Core/Settings.php:74
+msgid "Necessary"
+msgstr "Notwendig"
+
+#: admin/views/tabs/dashboard.php:307
+msgid "Needs action"
+msgstr "Handlungsbedarf"
+
+#: admin/views/tabs/dashboard.php:31
+msgid "Never"
+msgstr "Nie"
+
+#: includes/Scanner/CookieScanner.php:40
+msgid "Never expires"
+msgstr "Läuft nie ab"
+
+#: admin/views/tabs/policy.php:48
+msgid "No Cookie Policy page yet"
+msgstr "Noch keine Seite für die Cookie-Richtlinie"
+
+#: admin/views/tabs/design.php:384
+msgid "No Elementor or theme palette was found on this site."
+msgstr "Auf dieser Website wurde keine Elementor- oder Theme-Farbpalette gefunden."
+
+#: admin/views/tabs/logs.php:58
+msgid "No consent records yet. Records appear here as visitors interact with your cookie banner."
+msgstr "Noch keine Einwilligungseinträge. Einträge erscheinen hier, sobald Besucher mit Ihrem Cookie-Banner interagieren."
+
+#: admin/views/tabs/dashboard.php:269
+msgid "No consents recorded in this period yet."
+msgstr "In diesem Zeitraum wurden noch keine Einwilligungen erfasst."
+
+#: templates/cookie-policy.php:114
+msgid "No cookies are currently in use"
+msgstr "Derzeit werden keine Cookies verwendet"
+
+#: admin/views/tabs/dashboard.php:211
+msgid "No earlier period"
+msgstr "Kein früherer Zeitraum"
+
+#: admin/views/tabs/cookies.php:26
+msgid "No scan performed yet. Run a scan to detect cookies on your site."
+msgstr "Es wurde noch kein Scan durchgeführt. Starten Sie einen Scan, um Cookies auf Ihrer Website zu erkennen."
+
+#: admin/views/tabs/dashboard.php:72
+msgid "No tag ID"
+msgstr "Keine Tag-ID"
+
+#: admin/views/tabs/dashboard.php:80
+msgid "Not created"
+msgstr "Nicht erstellt"
+
+#: admin/views/tabs/dashboard.php:336
+msgid "Not met"
+msgstr "Nicht erfüllt"
+
+#: admin/views/tabs/dashboard.php:311
+msgid "Nothing is waiting on you"
+msgstr "Es steht nichts für Sie an"
+
+#: admin/views/tabs/dashboard.php:57
+msgid "Off"
+msgstr "Aus"
+
+#: templates/cookie-policy.php:89
+msgid "Only set after your consent."
+msgstr "Werden erst nach Ihrer Einwilligung gesetzt."
+
+#: templates/cookie-policy.php:139
+msgid "Open cookie settings"
+msgstr "Cookie-Einstellungen öffnen"
+
+#: admin/views/tabs/dashboard.php:100
+msgid "Open logs"
+msgstr "Protokolle öffnen"
+
+#: admin/views/tabs/design.php:60
+msgid "Opens the detailed choices."
+msgstr "Öffnet die detaillierten Auswahlmöglichkeiten."
+
+#: templates/cookie-policy.php:153
+msgid "Opt out of Google Analytics"
+msgstr "Google Analytics widersprechen"
+
+#: admin/views/tabs/policy.php:70
+msgid "Or place this shortcode manually on any page."
+msgstr "Oder fügen Sie diesen Shortcode manuell auf einer beliebigen Seite ein."
+
+#: admin/views/tabs/dashboard.php:142
+msgid "Overview"
+msgstr "Übersicht"
+
+#: admin/views/tabs/dashboard.php:279
+msgid "Partial consent"
+msgstr "Teilweise Einwilligung"
+
+#: admin/views/tabs/integrations.php:123
+msgid "Pixel ID"
+msgstr "Pixel-ID"
+
+#: admin/views/tabs/integrations.php:121
+msgid "Pixel is blocked until Marketing consent is given. Automatically activated when user accepts marketing cookies."
+msgstr "Das Pixel wird blockiert, bis die Einwilligung für Marketing erteilt wurde. Es wird automatisch aktiviert, sobald der Nutzer Marketing-Cookies akzeptiert."
+
+#: admin/views/tabs/design.php:348
+msgid "Place this shortcode in your footer or a menu to open the cookie settings — useful if you turn the floating button off. Optional attributes: label and class, e.g. [privento_revoke label=\"Cookie settings\" class=\"my-link\"]."
+msgstr "Fügen Sie diesen Shortcode in Ihren Footer oder ein Menü ein, um die Cookie-Einstellungen zu öffnen — nützlich, wenn Sie den schwebenden Button deaktivieren. Optionale Attribute: label und class, z. B. [privento_revoke label=\"Cookie-Einstellungen\" class=\"my-link\"]."
+
+#: admin/views/tabs/design.php:219
+msgid "Placement & Layout"
+msgstr "Platzierung & Layout"
+
+#: admin/views/tabs/design.php:35
+msgid "Policy Link"
+msgstr "Richtlinien-Link"
+
+#: admin/views/tabs/policy.php:79
+msgid "Policy Page Settings"
+msgstr "Einstellungen der Richtlinienseite"
+
+#: admin/views/tabs/policy.php:32
+msgid "Policy Page Status"
+msgstr "Status der Richtlinienseite"
+
+#: admin/views/tabs/design.php:333
+msgid "Position"
+msgstr "Position"
+
+#: admin/views/tabs/cookies.php:57
+#: admin/views/tabs/texts.php:95
+#: includes/Core/Settings.php:76
+msgid "Preferences"
+msgstr "Präferenzen"
+
+#: admin/views/tabs/design.php:411
+msgid "Preview"
+msgstr "Vorschau"
+
+#: admin/views/tabs/dashboard.php:155
+msgid "Preview banner"
+msgstr "Banner-Vorschau"
+
+#: includes/Admin/Admin.php:27
+#: includes/Admin/Admin.php:28
+msgid "Privento"
+msgstr "Privento"
+
+#: admin/views/layout.php:41
+msgid "Privento navigation"
+msgstr "Privento-Navigation"
+
+#: templates/cookie-policy.php:97
+msgid "Provider"
+msgstr "Anbieter"
+
+#: templates/cookie-policy.php:98
+msgid "Purpose"
+msgstr "Zweck"
+
+#: admin/views/tabs/dashboard.php:370
+msgid "Quick actions"
+msgstr "Schnellaktionen"
+
+#: includes/Core/Settings.php:69
+msgid "Read our cookie policy"
+msgstr "Unsere Cookie-Richtlinie lesen"
+
+#: admin/views/tabs/integrations.php:33
+msgid "Recommended"
+msgstr "Empfohlen"
+
+#: admin/views/tabs/policy.php:57
+msgid "Regenerate Policy Page"
+msgstr "Richtlinienseite neu erstellen"
+
+#: includes/Scanner/CookieScanner.php:50
+msgid "Registers a unique ID for a 24-hour session."
+msgstr "Registriert eine eindeutige ID für eine 24-Stunden-Sitzung."
+
+#: includes/Scanner/CookieScanner.php:66
+msgid "Registers a unique ID to keep statistics on videos."
+msgstr "Registriert eine eindeutige ID, um Statistiken zu Videos zu führen."
+
+#: includes/Scanner/CookieScanner.php:48
+msgid "Registers a unique ID used to generate statistical data on how visitors use the website."
+msgstr "Registriert eine eindeutige ID, die verwendet wird, um statistische Daten darüber zu erzeugen, wie Besucher die Website nutzen."
+
+#: admin/views/tabs/texts.php:74
+msgid "Reject All Button"
+msgstr "Button „Alle ablehnen“"
+
+#: admin/views/tabs/design.php:49
+msgid "Reject Button"
+msgstr "Ablehnen-Button"
+
+#: includes/Core/Settings.php:71
+msgid "Reject all"
+msgstr "Alle ablehnen"
+
+#: admin/views/tabs/design.php:453
+msgid "Reject button"
+msgstr "Ablehnen-Button"
+
+#: templates/cookie-policy.php:144
+msgid "Reject or delete cookies in your browser"
+msgstr "Cookies in Ihrem Browser ablehnen oder löschen"
+
+#: admin/views/tabs/dashboard.php:283
+#: admin/views/tabs/logs.php:68
+msgid "Rejected"
+msgstr "Abgelehnt"
+
+#: admin/views/tabs/logs.php:49
+msgid "Rejected All"
+msgstr "Alle abgelehnt"
+
+#: admin/views/tabs/design.php:463
+msgid "Reset to default colors"
+msgstr "Auf Standardfarben zurücksetzen"
+
+#: admin/views/tabs/dashboard.php:104
+msgid "Revoke option available"
+msgstr "Widerrufsmöglichkeit vorhanden"
+
+#: admin/views/tabs/design.php:69
+msgid "Save Button"
+msgstr "Speichern-Button"
+
+#: admin/views/tabs/design.php:207
+#: admin/views/tabs/design.php:466
+#: admin/views/tabs/integrations.php:21
+#: admin/views/tabs/settings.php:21
+#: admin/views/tabs/texts.php:21
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: admin/views/tabs/policy.php:140
+msgid "Save Intro Text"
+msgstr "Einleitungstext speichern"
+
+#: admin/views/tabs/texts.php:76
+msgid "Save Preferences Button"
+msgstr "Button „Präferenzen speichern“"
+
+#: admin/views/tabs/policy.php:116
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: includes/Core/Settings.php:73
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+#: includes/Admin/Admin.php:112
+msgid "Saving…"
+msgstr "Wird gespeichert…"
+
+#: admin/views/tabs/cookies.php:32
+msgid "Scan Now"
+msgstr "Jetzt scannen"
+
+#: includes/Admin/Admin.php:115
+msgid "Scan complete."
+msgstr "Scan abgeschlossen."
+
+#: admin/views/tabs/dashboard.php:380
+msgid "Scan cookies again"
+msgstr "Cookies erneut scannen"
+
+#: admin/views/tabs/dashboard.php:91
+msgid "Scan now"
+msgstr "Jetzt scannen"
+
+#: includes/Admin/Admin.php:114
+msgid "Scanning cookies…"
+msgstr "Cookies werden gescannt…"
+
+#: includes/Admin/Ajax.php:215
+msgid "Security check failed."
+msgstr "Sicherheitsprüfung fehlgeschlagen."
+
+#: includes/Scanner/CookieScanner.php:33
+msgid "Security cookie for authenticated users."
+msgstr "Sicherheits-Cookie für angemeldete Benutzer."
+
+#: admin/views/tabs/cookies.php:76
+msgid "Service"
+msgstr "Dienst"
+
+#: includes/Scanner/CookieScanner.php:24
+msgid "Session"
+msgstr "Sitzung"
+
+#: admin/views/tabs/dashboard.php:75
+msgid "Set up"
+msgstr "Einrichten"
+
+#: admin/views/layout.php:24
+#: admin/views/tabs/settings.php:17
+#: includes/Admin/Admin.php:44
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: admin/views/tabs/design.php:59
+msgid "Settings Button"
+msgstr "Einstellungs-Button"
+
+#: includes/Admin/Ajax.php:52
+msgid "Settings saved successfully."
+msgstr "Einstellungen erfolgreich gespeichert."
+
+#: includes/Admin/Admin.php:113
+msgid "Settings saved!"
+msgstr "Einstellungen gespeichert!"
+
+#: admin/views/tabs/design.php:341
+#: admin/views/tabs/policy.php:63
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: admin/views/tabs/design.php:88
+msgid "Shortcode Link"
+msgstr "Shortcode-Link"
+
+#: admin/views/tabs/dashboard.php:55
+msgid "Shortcode link"
+msgstr "Shortcode-Link"
+
+#: admin/views/tabs/policy.php:99
+msgid "Show \"Last updated\" date"
+msgstr "Datum „Zuletzt aktualisiert“ anzeigen"
+
+#: admin/views/tabs/design.php:326
+msgid "Show Button"
+msgstr "Button anzeigen"
+
+#: admin/views/tabs/settings.php:60
+msgid "Show banner to EU visitors only"
+msgstr "Banner nur Besuchern aus der EU anzeigen"
+
+#: admin/views/tabs/texts.php:48
+msgid "Show link to the cookie policy"
+msgstr "Link zur Cookie-Richtlinie anzeigen"
+
+#: admin/views/tabs/logs.php:117
+msgid "Showing 50 of %d records. Export CSV for full dataset."
+msgstr "Es werden 50 von %d Einträgen angezeigt. Exportieren Sie die CSV-Datei für den vollständigen Datensatz."
+
+#: admin/views/tabs/texts.php:60
+msgid "Shown after the body text and in the settings window, linking to the Cookie Policy page."
+msgstr "Wird nach dem Fließtext und im Einstellungsfenster angezeigt und verlinkt auf die Seite mit der Cookie-Richtlinie."
+
+#: includes/Admin/Admin.php:116
+msgid "Something went wrong. Please try again."
+msgstr "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+
+#: admin/views/tabs/cookies.php:78
+msgid "Source"
+msgstr "Quelle"
+
+#: admin/views/tabs/cookies.php:58
+#: admin/views/tabs/texts.php:96
+#: includes/Core/Settings.php:78
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: includes/Scanner/CookieScanner.php:56
+msgid "Stores session data for Microsoft Clarity."
+msgstr "Speichert Sitzungsdaten für Microsoft Clarity."
+
+#: admin/views/tabs/design.php:70
+msgid "Stores the choice made inside the panel."
+msgstr "Speichert die im Einstellungsfenster getroffene Auswahl."
+
+#: includes/Scanner/CookieScanner.php:60
+msgid "Stores the time of the latest visit from a Facebook ad click."
+msgstr "Speichert den Zeitpunkt des letzten Besuchs über einen Klick auf eine Facebook-Anzeige."
+
+#: includes/Scanner/CookieScanner.php:35
+msgid "Stores user interface settings."
+msgstr "Speichert Einstellungen der Benutzeroberfläche."
+
+#: includes/Scanner/CookieScanner.php:37
+msgid "Stores your cookie consent preferences."
+msgstr "Speichert Ihre Cookie-Einwilligungspräferenzen."
+
+#: includes/Scanner/CookieScanner.php:45
+msgid "Stores your preferred language."
+msgstr "Speichert Ihre bevorzugte Sprache."
+
+#: includes/Scanner/CookieScanner.php:44
+msgid "Stores your selected language."
+msgstr "Speichert Ihre ausgewählte Sprache."
+
+#: admin/views/tabs/design.php:34
+#: admin/views/tabs/design.php:43
+#: admin/views/tabs/design.php:53
+#: admin/views/tabs/design.php:63
+#: admin/views/tabs/design.php:73
+msgid "Text"
+msgstr "Text"
+
+#: admin/views/layout.php:19
+#: includes/Admin/Admin.php:39
+msgid "Texts"
+msgstr "Texte"
+
+#: admin/views/tabs/texts.php:17
+msgid "Texts & Languages"
+msgstr "Texte & Sprachen"
+
+#: includes/Scanner/CookieScanner.php:40
+msgid "The WordPress theme of the website uses this cookie to implement or change the appearance of the content in real time."
+msgstr "Das WordPress-Theme der Website verwendet dieses Cookie, um das Erscheinungsbild der Inhalte in Echtzeit umzusetzen oder zu ändern."
+
+#: admin/views/tabs/design.php:89
+msgid "The [privento_revoke] link you place yourself."
+msgstr "Der [privento_revoke]-Link, den Sie selbst platzieren."
+
+#: admin/views/tabs/design.php:31
+msgid "The consent box itself and its text."
+msgstr "Die Einwilligungsbox selbst und ihr Text."
+
+#: admin/views/tabs/policy.php:95
+msgid "The page where your cookie policy shortcode is placed."
+msgstr "Die Seite, auf der der Shortcode Ihrer Cookie-Richtlinie eingefügt ist."
+
+#: admin/views/tabs/dashboard.php:90
+msgid "The policy can only list the cookies a scan has actually found."
+msgstr "Die Richtlinie kann nur die Cookies aufführen, die ein Scan tatsächlich gefunden hat."
+
+#: admin/views/tabs/design.php:40
+msgid "The primary action."
+msgstr "Die primäre Aktion."
+
+#: admin/views/tabs/design.php:80
+msgid "The round button that reopens the banner."
+msgstr "Der runde Button, der das Banner erneut öffnet."
+
+#: includes/Core/Settings.php:75
+msgid "These cookies are required for the website to work and cannot be switched off."
+msgstr "Diese Cookies sind für die Funktion der Website erforderlich und können nicht deaktiviert werden."
+
+#: templates/cookie-policy.php:87
+msgid "These cookies are strictly necessary for the website to work correctly. They cannot be disabled and do not require your consent under the ePrivacy Directive."
+msgstr "Diese Cookies sind für die ordnungsgemäße Funktion der Website unbedingt erforderlich. Sie können nicht deaktiviert werden und bedürfen nach der ePrivacy-Richtlinie keiner Einwilligung."
+
+#: includes/Core/Settings.php:81
+msgid "These cookies are used to show personalised ads."
+msgstr "Diese Cookies werden verwendet, um personalisierte Werbung anzuzeigen."
+
+#: includes/Core/Settings.php:79
+msgid "These cookies help us understand how visitors use the website."
+msgstr "Diese Cookies helfen uns zu verstehen, wie Besucher die Website nutzen."
+
+#: includes/Core/Settings.php:77
+msgid "These cookies remember your settings and personal choices."
+msgstr "Diese Cookies speichern Ihre Einstellungen und persönlichen Auswahlmöglichkeiten."
+
+#: admin/views/tabs/integrations.php:138
+msgid "These services are automatically blocked until the appropriate consent is given:"
+msgstr "Diese Dienste werden automatisch blockiert, bis die entsprechende Einwilligung erteilt wurde:"
+
+#: admin/views/tabs/settings.php:109
+msgid "This page should contain the shortcode: "
+msgstr "Diese Seite sollte folgenden Shortcode enthalten: "
+
+#: admin/views/tabs/policy.php:129
+msgid "This text appears at the top of your cookie policy page, before the cookie table."
+msgstr "Dieser Text erscheint oben auf der Seite Ihrer Cookie-Richtlinie, vor der Cookie-Tabelle."
+
+#: admin/views/tabs/policy.php:59
+msgid "This will scan your site for cookies and create a policy page with the [privento_cookie_policy] shortcode."
+msgstr "Dabei wird Ihre Website nach Cookies gescannt und eine Richtlinienseite mit dem Shortcode [privento_cookie_policy] erstellt."
+
+#: admin/views/tabs/dashboard.php:40
+#: admin/views/tabs/design.php:246
+msgid "Top Banner"
+msgstr "Banner oben"
+
+#: admin/views/tabs/logs.php:37
+msgid "Total"
+msgstr "Gesamt"
+
+#: admin/views/tabs/dashboard.php:224
+msgid "Total consents"
+msgstr "Einwilligungen gesamt"
+
+#: admin/views/tabs/dashboard.php:108
+msgid "Turn on"
+msgstr "Aktivieren"
+
+#: admin/views/tabs/design.php:289
+msgid "Typography"
+msgstr "Typografie"
+
+#: admin/views/tabs/cookies.php:35
+msgid "Update Cookie Policy"
+msgstr "Cookie-Richtlinie aktualisieren"
+
+#: includes/Scanner/CookieScanner.php:63
+msgid "Used by DoubleClick to check cookie support."
+msgstr "Wird von DoubleClick verwendet, um die Cookie-Unterstützung zu prüfen."
+
+#: includes/Scanner/CookieScanner.php:61
+msgid "Used by Facebook for targeted advertising."
+msgstr "Wird von Facebook für zielgerichtete Werbung verwendet."
+
+#: includes/Scanner/CookieScanner.php:59
+msgid "Used by Facebook to deliver ads."
+msgstr "Wird von Facebook zur Auslieferung von Werbeanzeigen verwendet."
+
+#: includes/Scanner/CookieScanner.php:49
+msgid "Used by Google Analytics 4 to persist session state."
+msgstr "Wird von Google Analytics 4 verwendet, um den Sitzungsstatus beizubehalten."
+
+#: includes/Scanner/CookieScanner.php:54
+msgid "Used by Hotjar to track the user session."
+msgstr "Wird von Hotjar verwendet, um die Sitzung des Nutzers zu verfolgen."
+
+#: includes/Scanner/CookieScanner.php:34
+msgid "Used to check whether cookies are enabled."
+msgstr "Wird verwendet, um zu prüfen, ob Cookies aktiviert sind."
+
+#: includes/Scanner/CookieScanner.php:64
+msgid "Used to target advertising."
+msgstr "Wird für zielgerichtete Werbung verwendet."
+
+#: includes/Scanner/CookieScanner.php:51
+#: includes/Scanner/CookieScanner.php:52
+msgid "Used to throttle the request rate to Google Analytics."
+msgstr "Wird verwendet, um die Anfragerate an Google Analytics zu drosseln."
+
+#: admin/views/tabs/policy.php:41
+msgid "View page"
+msgstr "Seite ansehen"
+
+#: includes/Scanner/CookieScanner.php:67
+msgid "Vimeo user tracking cookie."
+msgstr "Cookie von Vimeo zur Nutzerverfolgung."
+
+#: admin/views/tabs/dashboard.php:82
+msgid "Visitors must be able to read what each cookie is for before they decide."
+msgstr "Besucher müssen nachlesen können, wofür jedes Cookie dient, bevor sie sich entscheiden."
+
+#: admin/views/tabs/dashboard.php:107
+msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
+msgstr "Besucher müssen ihre Einwilligung ebenso einfach widerrufen können, wie sie sie erteilt haben — entweder über den schwebenden Button oder über einen [privento_revoke]-Link, den Sie selbst platzieren."
+
+#: admin/views/tabs/settings.php:76
+msgid "WCAG 2.1 AA compliant mode"
+msgstr "WCAG-2.1-AA-konformer Modus"
+
+#: templates/cookie-policy.php:158
+msgid "We reserve the right to update this cookie policy. Material changes result in a new cookie version, and you will be asked to renew your consent. The date of the latest update is shown at the top of this page."
+msgstr "Wir behalten uns vor, diese Cookie-Richtlinie zu aktualisieren. Wesentliche Änderungen führen zu einer neuen Cookie-Version, und Sie werden gebeten, Ihre Einwilligung zu erneuern. Das Datum der letzten Aktualisierung finden Sie oben auf dieser Seite."
+
+#: templates/cookie-policy.php:61
+msgid "We use Google Consent Mode v2, which ensures that no analytics cookies are set before you have actively accepted them. You can change your choices at any time via the \"Cookie settings\" button at the bottom of the page."
+msgstr "Wir verwenden Google Consent Mode v2. Damit ist sichergestellt, dass keine Analyse-Cookies gesetzt werden, bevor Sie diese aktiv akzeptiert haben. Sie können Ihre Auswahl jederzeit über den Button „Cookie-Einstellungen“ unten auf der Seite ändern."
+
+#: templates/cookie-policy.php:125
+msgid "We use Google Consent Mode v2, which lets Google adapt the behaviour of Google tags to your consent. If you reject statistics cookies, Google Analytics uses modelling to estimate aggregate figures without setting cookies or using personally identifying data."
+msgstr "Wir verwenden Google Consent Mode v2. Damit kann Google das Verhalten der Google-Tags an Ihre Einwilligung anpassen. Wenn Sie Statistik-Cookies ablehnen, schätzt Google Analytics aggregierte Werte mithilfe von Modellierung, ohne Cookies zu setzen oder personenbezogene Daten zu verwenden."
+
+#: includes/Core/Settings.php:67
+msgid "We use cookies"
+msgstr "Wir verwenden Cookies"
+
+#: admin/views/tabs/design.php:425
+msgid "We use cookies for statistics and marketing. Read more in our %s."
+msgstr "Wir verwenden Cookies für Statistiken und Marketing. Mehr dazu erfahren Sie in unserer %s."
+
+#: includes/Core/Settings.php:68
+msgid "We use cookies to improve your experience on the website, show relevant content and analyse our traffic. Choose your preferences below."
+msgstr "Wir verwenden Cookies, um Ihr Erlebnis auf der Website zu verbessern, relevante Inhalte anzuzeigen und unsere Zugriffe zu analysieren. Wählen Sie unten Ihre Präferenzen."
+
+#: templates/cookie-policy.php:67
+msgid "What are cookies?"
+msgstr "Was sind Cookies?"
+
+#: admin/views/tabs/settings.php:66
+msgid "When enabled, the banner is only shown to visitors from EU/EEA countries. Uses country codes from CDN/proxy headers (e.g. Cloudflare); without such a header the banner is shown. Showing it globally is also fine under GDPR."
+msgstr "Wenn aktiviert, wird das Banner nur Besuchern aus EU-/EWR-Ländern angezeigt. Verwendet Ländercodes aus CDN-/Proxy-Headern (z. B. Cloudflare); ohne einen solchen Header wird das Banner angezeigt. Eine weltweite Anzeige ist nach der DSGVO ebenfalls zulässig."
+
+#: templates/cookie-policy.php:72
+msgid "Which cookies do we use?"
+msgstr "Welche Cookies verwenden wir?"
+
+#: admin/views/tabs/dashboard.php:74
+msgid "Without it, Google's tags keep their default behaviour no matter what the visitor chose."
+msgstr "Ohne diese Funktion behalten die Google-Tags ihr Standardverhalten bei, unabhängig von der Auswahl des Besuchers."
+
+#: templates/cookie-policy.php:145
+msgid "You can also manage cookies directly in your browser. Note that disabling necessary cookies can affect how the website works:"
+msgstr "Sie können Cookies auch direkt in Ihrem Browser verwalten. Bitte beachten Sie, dass das Deaktivieren notwendiger Cookies die Funktion der Website beeinträchtigen kann:"
+
+#: templates/cookie-policy.php:132
+msgid "You can change your cookie preferences at any time using the button below. Your choice is stored for %d days, after which we ask you to confirm your preferences again."
+msgstr "Sie können Ihre Cookie-Präferenzen jederzeit über den folgenden Button ändern. Ihre Auswahl wird %d Tage gespeichert; danach bitten wir Sie, Ihre Präferenzen erneut zu bestätigen."
+
+#: templates/cookie-policy.php:154
+msgid "You can install the <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\">Google Analytics Opt-out Browser Add-on</a> to prevent data from being sent to Google Analytics on all websites."
+msgstr "Sie können das <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener\">Browser-Add-on zur Deaktivierung von Google Analytics</a> installieren, um zu verhindern, dass auf sämtlichen Websites Daten an Google Analytics gesendet werden."
+
+#: includes/Scanner/CookieScanner.php:65
+msgid "YouTube video statistics and advertising."
+msgstr "Videostatistiken und Werbung von YouTube."
+
+#: admin/views/tabs/dashboard.php:146
+msgid "Your compliance status for the last %d days — and what is still missing."
+msgstr "Ihr Compliance-Status der letzten %d Tage — und was noch fehlt."
+
+#: admin/views/tabs/design.php:426
+msgid "cookie policy"
+msgstr "Cookie-Richtlinie"
+
+#: includes/Core/ThemeColors.php:116
+msgid "theme"
+msgstr "dem Theme"
+
+#: admin/views/tabs/settings.php:102
+msgid "— Select page —"
+msgstr "— Seite auswählen —"
+
+#: admin/views/tabs/integrations.php:60
+#: admin/views/tabs/integrations.php:64
+#: admin/views/tabs/integrations.php:68
+msgid "→ Marketing consent"
+msgstr "→ Einwilligung für Marketing"
+
+#: admin/views/tabs/integrations.php:72
+msgid "→ Preferences consent"
+msgstr "→ Einwilligung für Präferenzen"
+
+#: admin/views/tabs/integrations.php:56
+msgid "→ Statistics consent"
+msgstr "→ Einwilligung für Statistiken"

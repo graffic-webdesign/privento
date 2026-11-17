@@ -1,0 +1,39 @@
+name: Lint and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.0', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - name: Syntax check
+        run: find . -name '*.php' -not -path './.git/*' -print0 | xargs -0 -n1 php -l
+      - name: Tests
+        run: php tests/run.php
+
+  generated-files:
+    # Translations and minified assets are committed. Rebuild them and fail if
+    # the result differs: someone edited a source file and forgot to rebuild.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Translations
+        run: python3 bin/i18n.py
+      - name: Minified assets
+        run: bash bin/minify.sh
+      - name: Nothing changed
+        run: git diff --exit-code
