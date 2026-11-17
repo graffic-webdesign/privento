@@ -4,7 +4,7 @@ Tags: gdpr, cookie consent, cookie banner, google consent mode, privacy
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,12 +76,16 @@ Yes — consent is handled in the browser, and recording a consent does not depe
 Yes. Texts follow the WordPress site language automatically, including per-page languages from WPML and Polylang. See "Languages" above.
 
 = How do updates work without WordPress.org? =
-The plugin checks its GitHub repository for a newer release twice a day, as part of WordPress' own update check. You update it like any other plugin.
+The plugin checks its GitHub repository for a newer release twice a day, as part of WordPress' own update check. You update it like any other plugin. To look right away, go to Dashboard → Updates and click Check again.
 
 = What happens when I delete the plugin? =
 Its settings and the consent log are removed. The Cookie Policy page stays, since it is a normal page on your site. Deactivating removes nothing.
 
 == Changelog ==
+
+= 1.7.2 =
+* Fixed: Dashboard → Updates → Check again did not find a new Privento release when clicked within a minute of opening the screen. It now always looks.
+* New releases reach sites sooner: the plugin remembers the latest release for one hour instead of twelve.
 
 = 1.7.1 =
 * Removed the geo-targeting option from Settings. It never had any effect: the banner was shown to every visitor whether it was on or off, and it still is. Nothing changes on your site.
