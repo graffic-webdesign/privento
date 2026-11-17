@@ -313,11 +313,7 @@
       return;
     }
     Banner.init();
-    // Country detection is server-side (CF-IPCountry and similar headers);
-    // geoAllowed is true whenever no header was available.
-    if (!cfg.geoTargeting || cfg.geoAllowed !== false) {
-      setTimeout(() => Banner.show(), 600);
-    }
+    setTimeout(() => Banner.show(), 600);
   }
 
   if (document.readyState === 'loading') {

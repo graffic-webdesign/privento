@@ -157,7 +157,6 @@ class Installer {
 
                 // Consent management
                 'consent_duration_days' => 180,
-                'geo_targeting'         => '0',   // 0 = global, 1 = EU only
 
                 // Integrations
                 'gcm_enabled'           => '0',

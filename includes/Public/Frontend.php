@@ -52,37 +52,6 @@ class Frontend {
         wp_localize_script( 'privento-public', 'PriventoConfig', $this->get_js_config() );
     }
 
-    /**
-     * Server-side EU detection — no external API call needed.
-     * Checks Cloudflare, common proxy headers, then falls back to true (show banner).
-     */
-    private function is_eu_visitor( array $s ): bool {
-        if ( '1' !== ( $s['geo_targeting'] ?? '0' ) ) {
-            return true; // geo-targeting off — always show
-        }
-
-        $eu = [ 'AT','BE','BG','CY','CZ','DE','DK','EE','ES','FI','FR','GR','HR',
-                'HU','IE','IT','LT','LU','LV','MT','NL','PL','PT','RO','SE','SI',
-                'SK','NO','IS','LI','CH','GB' ];
-
-        // Cloudflare header (most reliable)
-        $cf = $_SERVER['HTTP_CF_IPCOUNTRY'] ?? '';
-        if ( $cf && 2 === strlen( $cf ) ) {
-            return in_array( strtoupper( $cf ), $eu, true );
-        }
-
-        // Other common CDN/proxy headers
-        foreach ( [ 'HTTP_X_COUNTRY_CODE', 'HTTP_X_GEO_COUNTRY', 'GEOIP_COUNTRY_CODE' ] as $header ) {
-            $val = $_SERVER[ $header ] ?? '';
-            if ( $val && 2 === strlen( $val ) ) {
-                return in_array( strtoupper( $val ), $eu, true );
-            }
-        }
-
-        // No header available — default to showing banner (privacy-safe fallback)
-        return true;
-    }
-
     private function get_js_config(): array {
         $s = Settings::all();
         return [
@@ -96,8 +65,6 @@ class Frontend {
             'gtmId'            => Settings::gtm_id(),
             'ga4Id'            => Settings::ga4_id(),
             'metaPixelId'      => Settings::meta_pixel_id(),
-            'geoTargeting'     => '1' === ( $s['geo_targeting'] ?? '0' ),
-            'geoAllowed'       => $this->is_eu_visitor( $s ),
             'wcag'             => '1' === ( $s['wcag_compliant'] ?? '0' ),
             'focusRing'        => '1' === ( $s['focus_ring'] ?? '0' ),
             'floatingBtn'      => [

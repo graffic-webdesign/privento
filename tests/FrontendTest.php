@@ -62,3 +62,12 @@ ob_start();
 t_assert( 2 === substr_count( ob_get_clean(), 'policy-link"' ), 'policy_link_is_on_by_default' );
 
 t_assert( [ 'policy_link_enabled' => '0' ] === t_call_private( new \Privento\Admin\Ajax(), 'sanitize_settings', [ 'policy_link_enabled' => '0' ] ), 'policy_link_switch_is_saved' );
+
+// Geo-targeting is gone: it never hid the banner (the flag reached the script
+// as "" instead of false), and server-side country detection cannot work behind
+// a page cache. A site that had it switched on behaves exactly as before.
+t_reset();
+$GLOBALS['wp_options']['privento_settings'] = [ 'geo_targeting' => '1' ];
+$config = t_call_private( new \Privento\Public\Frontend(), 'get_js_config' );
+t_assert( ! array_key_exists( 'geoTargeting', $config ) && ! array_key_exists( 'geoAllowed', $config ), 'geo_targeting_is_not_sent_to_the_script' );
+t_assert( [] === t_call_private( new \Privento\Admin\Ajax(), 'sanitize_settings', [ 'geo_targeting' => '1' ] ), 'geo_targeting_is_no_longer_a_setting' );

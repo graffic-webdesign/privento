@@ -53,22 +53,6 @@ $s = Settings::all();
 
             <div class="prv-panel">
                 <div class="prv-panel__header">
-                    <h2 class="prv-panel__title"><?php esc_html_e( 'Geo-Targeting', 'privento' ); ?></h2>
-                </div>
-                <div class="prv-panel__body">
-                    <div class="prv-field prv-field--inline">
-                        <label class="prv-label"><?php esc_html_e( 'Show banner to EU visitors only', 'privento' ); ?></label>
-                        <label class="prv-toggle-field">
-                            <input type="checkbox" name="geo_targeting" value="1" <?php checked( $s['geo_targeting'] ?? '0', '1' ); ?>>
-                            <span class="prv-toggle-track"></span>
-                        </label>
-                    </div>
-                    <p class="prv-hint"><?php esc_html_e( 'When enabled, the banner is only shown to visitors from EU/EEA countries. Uses country codes from CDN/proxy headers (e.g. Cloudflare); without such a header the banner is shown. Showing it globally is also fine under GDPR.', 'privento' ); ?></p>
-                </div>
-            </div>
-
-            <div class="prv-panel">
-                <div class="prv-panel__header">
                     <h2 class="prv-panel__title"><?php esc_html_e( 'Accessibility (WCAG)', 'privento' ); ?></h2>
                 </div>
                 <div class="prv-panel__body">

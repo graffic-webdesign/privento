@@ -144,7 +144,7 @@ class Ajax {
 
         $bool_fields = [
             'shadow', 'gcm_enabled', 'gcm_default_denied',
-            'geo_targeting', 'floating_btn_enabled',
+            'floating_btn_enabled',
             'wcag_compliant', 'focus_ring',
             'policy_show_date', 'policy_show_revoke', 'policy_link_enabled',
         ];

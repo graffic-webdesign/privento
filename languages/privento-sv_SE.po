@@ -119,7 +119,7 @@ msgstr "Accepterade alla"
 msgid "Accepted all"
 msgstr "Accepterade alla"
 
-#: admin/views/tabs/settings.php:72
+#: admin/views/tabs/settings.php:56
 msgid "Accessibility (WCAG)"
 msgstr "Tillgänglighet (WCAG)"
 
@@ -127,7 +127,7 @@ msgstr "Tillgänglighet (WCAG)"
 msgid "All clear"
 msgstr "Allt ser bra ut"
 
-#: includes/Public/Frontend.php:246
+#: includes/Public/Frontend.php:213
 msgid "Always active"
 msgstr "Alltid aktiva"
 
@@ -312,7 +312,7 @@ msgstr "Kontrasten mäts mot WCAG 2.1 AA (4,5:1 för text)."
 msgid "Controls how the consent banner looks across the site."
 msgstr "Styr hur samtyckesbannern ser ut på hela webbplatsen."
 
-#: includes/Public/Frontend.php:272
+#: includes/Public/Frontend.php:239
 msgid "Cookie"
 msgstr "Cookie"
 
@@ -323,12 +323,12 @@ msgstr "Cookienamn"
 #: admin/views/layout.php:22
 #: admin/views/tabs/policy.php:22
 #: includes/Admin/Admin.php:42
-#: includes/Core/Installer.php:270
+#: includes/Core/Installer.php:269
 msgid "Cookie Policy"
 msgstr "Cookiepolicy"
 
-#: admin/views/tabs/settings.php:94
-#: admin/views/tabs/settings.php:98
+#: admin/views/tabs/settings.php:78
+#: admin/views/tabs/settings.php:82
 msgid "Cookie Policy Page"
 msgstr "Cookiepolicysida"
 
@@ -349,7 +349,7 @@ msgstr "Cookiepolicysida finns"
 msgid "Cookie Scanner"
 msgstr "Cookieskanner"
 
-#: includes/Public/Frontend.php:305
+#: includes/Public/Frontend.php:272
 msgid "Cookie Settings"
 msgstr "Cookieinställningar"
 
@@ -357,7 +357,7 @@ msgstr "Cookieinställningar"
 msgid "Cookie categories"
 msgstr "Cookiekategorier"
 
-#: includes/Public/Frontend.php:154
+#: includes/Public/Frontend.php:121
 msgid "Cookie consent"
 msgstr "Cookiesamtycke"
 
@@ -456,7 +456,7 @@ msgstr "Sätt alla signaler till \"Denied\" som standard före samtycke"
 
 #: admin/views/tabs/cookies.php:77
 #: admin/views/tabs/texts.php:119
-#: includes/Public/Frontend.php:280
+#: includes/Public/Frontend.php:247
 msgid "Description"
 msgstr "Beskrivning"
 
@@ -474,7 +474,7 @@ msgstr "Dator"
 msgid "Drop Shadow"
 msgstr "Skugga"
 
-#: includes/Public/Frontend.php:276
+#: includes/Public/Frontend.php:243
 msgid "Duration"
 msgstr "Varaktighet"
 
@@ -490,7 +490,7 @@ msgstr "Redigera i WordPress"
 msgid "Enable Google Consent Mode v2"
 msgstr "Aktivera Google Consent Mode v2"
 
-#: admin/views/tabs/settings.php:83
+#: admin/views/tabs/settings.php:67
 msgid "Enhanced focus rings"
 msgstr "Förstärkta fokusringar"
 
@@ -574,10 +574,6 @@ msgstr "Allmänna inställningar för tillägget och alternativ för samtyckesha
 #: admin/views/tabs/policy.php:57
 msgid "Generate Policy Page"
 msgstr "Generera policysida"
-
-#: admin/views/tabs/settings.php:56
-msgid "Geo-Targeting"
-msgstr "Geografisk inriktning"
 
 #: admin/views/tabs/integrations.php:101
 msgid "Google Analytics 4"
@@ -719,7 +715,7 @@ msgstr "Upprätthåller användarens sessionstillstånd."
 msgid "Manage Preferences Button"
 msgstr "Knappen Hantera inställningar"
 
-#: includes/Public/Frontend.php:304
+#: includes/Public/Frontend.php:271
 msgid "Manage cookie preferences"
 msgstr "Hantera cookieinställningar"
 
@@ -1091,10 +1087,6 @@ msgstr "Visa datum för \"Senast uppdaterad\""
 msgid "Show Button"
 msgstr "Visa knapp"
 
-#: admin/views/tabs/settings.php:60
-msgid "Show banner to EU visitors only"
-msgstr "Visa bannern endast för besökare från EU"
-
 #: admin/views/tabs/texts.php:48
 msgid "Show link to the cookie policy"
 msgstr "Visa länk till cookiepolicyn"
@@ -1218,7 +1210,7 @@ msgstr "De här cookies kommer ihåg dina inställningar och personliga val."
 msgid "These services are automatically blocked until the appropriate consent is given:"
 msgstr "De här tjänsterna blockeras automatiskt tills rätt samtycke har getts:"
 
-#: admin/views/tabs/settings.php:109
+#: admin/views/tabs/settings.php:93
 msgid "This page should contain the shortcode: "
 msgstr "Den här sidan ska innehålla kortkoden: "
 
@@ -1304,7 +1296,7 @@ msgstr "Besökare måste kunna läsa vad varje cookie används till innan de bes
 msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
 msgstr "Besökare måste kunna återkalla sitt samtycke lika enkelt som de gav det — antingen via den flytande knappen eller en [privento_revoke]-länk som du själv placerar ut."
 
-#: admin/views/tabs/settings.php:76
+#: admin/views/tabs/settings.php:60
 msgid "WCAG 2.1 AA compliant mode"
 msgstr "Läge som uppfyller WCAG 2.1 AA"
 
@@ -1335,10 +1327,6 @@ msgstr "Vi använder cookies för att förbättra din upplevelse på webbplatsen
 #: templates/cookie-policy.php:67
 msgid "What are cookies?"
 msgstr "Vad är cookies?"
-
-#: admin/views/tabs/settings.php:66
-msgid "When enabled, the banner is only shown to visitors from EU/EEA countries. Uses country codes from CDN/proxy headers (e.g. Cloudflare); without such a header the banner is shown. Showing it globally is also fine under GDPR."
-msgstr "När detta är aktiverat visas bannern bara för besökare från EU/EES-länder. Använder landskoder från CDN-/proxyheadrar (t.ex. Cloudflare); saknas en sådan header visas bannern. Att visa den globalt går också bra enligt GDPR."
 
 #: templates/cookie-policy.php:72
 msgid "Which cookies do we use?"
@@ -1376,7 +1364,7 @@ msgstr "cookiepolicy"
 msgid "theme"
 msgstr "temat"
 
-#: admin/views/tabs/settings.php:102
+#: admin/views/tabs/settings.php:86
 msgid "— Select page —"
 msgstr "— Välj sida —"
 

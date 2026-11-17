@@ -37,7 +37,6 @@ The banner, the settings window and the cookie policy follow the language of the
 * Banner position: bottom bar, centred modal, left or right corner
 * Colours with presets, live preview and WCAG contrast readouts; can pick up the palette of your theme or Elementor
 * Google Tag Manager, GA4 and Meta Pixel integration
-* Geo-targeting (EU/EEA only, or everyone)
 * WCAG focus options
 
 = Updates =

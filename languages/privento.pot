@@ -117,7 +117,7 @@ msgstr ""
 msgid "Accepted all"
 msgstr ""
 
-#: admin/views/tabs/settings.php:72
+#: admin/views/tabs/settings.php:56
 msgid "Accessibility (WCAG)"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "All clear"
 msgstr ""
 
-#: includes/Public/Frontend.php:246
+#: includes/Public/Frontend.php:213
 msgid "Always active"
 msgstr ""
 
@@ -310,7 +310,7 @@ msgstr ""
 msgid "Controls how the consent banner looks across the site."
 msgstr ""
 
-#: includes/Public/Frontend.php:272
+#: includes/Public/Frontend.php:239
 msgid "Cookie"
 msgstr ""
 
@@ -321,12 +321,12 @@ msgstr ""
 #: admin/views/layout.php:22
 #: admin/views/tabs/policy.php:22
 #: includes/Admin/Admin.php:42
-#: includes/Core/Installer.php:270
+#: includes/Core/Installer.php:269
 msgid "Cookie Policy"
 msgstr ""
 
-#: admin/views/tabs/settings.php:94
-#: admin/views/tabs/settings.php:98
+#: admin/views/tabs/settings.php:78
+#: admin/views/tabs/settings.php:82
 msgid "Cookie Policy Page"
 msgstr ""
 
@@ -347,7 +347,7 @@ msgstr ""
 msgid "Cookie Scanner"
 msgstr ""
 
-#: includes/Public/Frontend.php:305
+#: includes/Public/Frontend.php:272
 msgid "Cookie Settings"
 msgstr ""
 
@@ -355,7 +355,7 @@ msgstr ""
 msgid "Cookie categories"
 msgstr ""
 
-#: includes/Public/Frontend.php:154
+#: includes/Public/Frontend.php:121
 msgid "Cookie consent"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgstr ""
 
 #: admin/views/tabs/cookies.php:77
 #: admin/views/tabs/texts.php:119
-#: includes/Public/Frontend.php:280
+#: includes/Public/Frontend.php:247
 msgid "Description"
 msgstr ""
 
@@ -472,7 +472,7 @@ msgstr ""
 msgid "Drop Shadow"
 msgstr ""
 
-#: includes/Public/Frontend.php:276
+#: includes/Public/Frontend.php:243
 msgid "Duration"
 msgstr ""
 
@@ -488,7 +488,7 @@ msgstr ""
 msgid "Enable Google Consent Mode v2"
 msgstr ""
 
-#: admin/views/tabs/settings.php:83
+#: admin/views/tabs/settings.php:67
 msgid "Enhanced focus rings"
 msgstr ""
 
@@ -571,10 +571,6 @@ msgstr ""
 
 #: admin/views/tabs/policy.php:57
 msgid "Generate Policy Page"
-msgstr ""
-
-#: admin/views/tabs/settings.php:56
-msgid "Geo-Targeting"
 msgstr ""
 
 #: admin/views/tabs/integrations.php:101
@@ -717,7 +713,7 @@ msgstr ""
 msgid "Manage Preferences Button"
 msgstr ""
 
-#: includes/Public/Frontend.php:304
+#: includes/Public/Frontend.php:271
 msgid "Manage cookie preferences"
 msgstr ""
 
@@ -1089,10 +1085,6 @@ msgstr ""
 msgid "Show Button"
 msgstr ""
 
-#: admin/views/tabs/settings.php:60
-msgid "Show banner to EU visitors only"
-msgstr ""
-
 #: admin/views/tabs/texts.php:48
 msgid "Show link to the cookie policy"
 msgstr ""
@@ -1216,7 +1208,7 @@ msgstr ""
 msgid "These services are automatically blocked until the appropriate consent is given:"
 msgstr ""
 
-#: admin/views/tabs/settings.php:109
+#: admin/views/tabs/settings.php:93
 msgid "This page should contain the shortcode: "
 msgstr ""
 
@@ -1302,7 +1294,7 @@ msgstr ""
 msgid "Visitors must be able to withdraw consent as easily as they gave it — either through the floating button or a [privento_revoke] link you place yourself."
 msgstr ""
 
-#: admin/views/tabs/settings.php:76
+#: admin/views/tabs/settings.php:60
 msgid "WCAG 2.1 AA compliant mode"
 msgstr ""
 
@@ -1332,10 +1324,6 @@ msgstr ""
 
 #: templates/cookie-policy.php:67
 msgid "What are cookies?"
-msgstr ""
-
-#: admin/views/tabs/settings.php:66
-msgid "When enabled, the banner is only shown to visitors from EU/EEA countries. Uses country codes from CDN/proxy headers (e.g. Cloudflare); without such a header the banner is shown. Showing it globally is also fine under GDPR."
 msgstr ""
 
 #: templates/cookie-policy.php:72
@@ -1374,7 +1362,7 @@ msgstr ""
 msgid "theme"
 msgstr ""
 
-#: admin/views/tabs/settings.php:102
+#: admin/views/tabs/settings.php:86
 msgid "— Select page —"
 msgstr ""
 

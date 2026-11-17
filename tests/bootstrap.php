@@ -112,3 +112,5 @@ function get_bloginfo( $key ) { return '6.7'; }
 function t_call_private( object $object, string $method, ...$args ) {
     return ( fn() => $this->$method( ...$args ) )->call( $object );
 }
+function rest_url( $path = '' ) { return 'https://example.test/wp-json/' . $path; }
+function esc_url_raw( $url ) { return $url; }
